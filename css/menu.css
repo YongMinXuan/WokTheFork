@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700|Roboto:300,400,500,700');
+
+h1, h2, h3, h4 {
+  font-family: 'Raleway', cursive;
+}
+body{
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 70px;
+}
+ul{
+  list-style: none;
+}
+.logo{
+  height: 50px;
+  width: 100px;
+  text-indent: -9999px;
+  background-image: url('../images/logo.png');
+  background-size: cover;
+  margin-bottom: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+
+}
+.menu{
+  display: flex;
+  align-items: center;
+}
+.nav li{
+  display: inline;
+  text-transform: uppercase;
+}
+.nav li a{
+  color: black;
+}
+.nav li a:hover{
+  color: #af0a0a;
+}
+#current-page a{
+  color: red;
+}
+.footer{
+  background-color: rgb(32, 33, 33);
+  color: white;
+  padding: 30px 0px;
+}
+.footer-header{
+  font-weight: 600;
+  font-size: 18px;
+}
