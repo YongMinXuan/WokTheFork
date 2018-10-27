@@ -32,18 +32,18 @@ header {
   background-color: white;
 
 }
-.menu{
-  display: flex;
-  align-items: center;
-}
-.nav li{
+
+.custom-nav li{
   display: inline;
   text-transform: uppercase;
 }
-.nav li a{
+.dropdown-item:hover{
+  color: #af0a0a;
+}
+.navbar-light .navbar-nav .nav-link{
   color: black;
 }
-.nav li a:hover{
+.navbar-light .navbar-nav .nav-link:hover{
   color: #af0a0a;
 }
 #current-page a{
@@ -57,4 +57,21 @@ header {
 .footer-header{
   font-weight: 600;
   font-size: 18px;
+}
+#navbarSupportedContent{
+  /* display: flex; */
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+/* @media only screen and (max-width: 1250px){
+  body {
+    font-size: 12px;
+  }
+  .nav-link{
+    padding: 0.25rem 0.5rem;
+  }
+} */
+
+@media only screen and (max-width: 768px){
+
 }
