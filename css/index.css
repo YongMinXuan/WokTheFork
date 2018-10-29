@@ -3,7 +3,7 @@
 .banner{
   padding: 30px 0px;
 }
-.banner:nth-child(even){
+.banner:nth-child(odd){
   background-color: #eeeeee;
 }
 #big-banner{
@@ -138,6 +138,11 @@
   padding: 14px 15px;
   border-radius: 0px;
   width: 100%;
+  border: 1px solid #ccc;
+}
+.date-picker{
+  border: 1px solid #ccc;
+
 }
 #trip-advisor-image{
   height: 120px;
@@ -145,6 +150,14 @@
 .vertical-center{
   display: flex;
   align-items: center;
+}
+.tour-basic{
+  max-height: 200px;
+  margin: auto auto;
+  display: block;
+}
+#voucher{
+  height: 150px;
 }
 @media only screen and (max-width: 768px){
 
