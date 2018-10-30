@@ -10,18 +10,25 @@
     <meta name="keywords" content="" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
     <!-- Bootstrap Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Font Awesome Optional theme -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
     <link rel="stylesheet" type="text/css" href="./css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="./css/template.css" />
     <link rel="stylesheet" type="text/css" href="./css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="./css/button.css" />
+    <link rel="stylesheet" type="text/css" href="./css/date.css" />
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
 
   </head>
   <body>
-    <header>
+    <!-- <header>
 
       <nav class="navbar navbar-expand-lg navbar-light">
 
@@ -64,21 +71,44 @@
 
         </div>
       </nav>
+    </header> -->
+    <header class="main_h">
+
+        <div class="header-row">
+            <!-- <a class="logo" href="#">P/F</a> -->
+            <a href="index.html" title="Wok the Fork - Singapore Food Tour"><h1 class="logo">Wok the Fork - Singapore Food Tour</h1></a>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a class="nav-link" href="#">Home</a></li>
+                    <li><a class="nav-link" href="#" >
+                      Cuisines
+                    </a>
+                    </li>
+                    <li><a class="nav-link" href="#">Themes</a></li>
+                    <li><a class="nav-link" href="#">About Us</a></li>
+                    <li><a class="nav-link" href="#">Blog</a></li>
+                    <li>
+                      <a class="nav-link" href="#">Corporate Events</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div> <!-- / row -->
+
     </header>
     <div class="container-fluid">
 
-      <!-- <div class="row" id="big-banner">
-        <div class="videoWrapper">
-          <div class="overlay">
-
-          </div>
-          <video autoplay muted loop id="myVideo">
-            <source src="./images/rain.mp4" type="video/mp4">
-          </video>
-        </div>
 
 
-      </div> -->
       <div id="carouselExampleIndicators" class="row carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -88,12 +118,24 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="./images/chinatown.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Chinatown</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="./images/laupasat.jpg" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Lau Pa Sat</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="./images/mixed.jpg" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Mixed Culture</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -105,6 +147,198 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+
+      <div class="row banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-2">
+              <div class="dropdown">
+                <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select Tour
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="date-picker">
+              	<div class="input">
+              		<div class="result">Select Date: <span></span></div>
+              		<button><i class="fa fa-calendar"></i></button>
+              	</div>
+              	<div class="calendar"></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="No. of pax" aria-label="No. of pax" aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <a href="#" class="btn btn-sm animated-button victoria-four">Submit</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row banner">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-1 vertical-center">
+          <img src="./images/trip-advisor-traveller-choice.png" id="trip-advisor-image"/>
+        </div>
+        <div class="col-md-6 vertical-center">
+          <h2 class="banner-title">TripAdvisor Traveller's Choice 2018</h1>
+        </div>
+      </div>
+
+
+      <div class="row banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="banner-title">Choose Your Adventure</h1>
+            </div>
+          </div>
+          <div class="row">
+            <p class="banner-description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="row">
+            <div class="btn-group" role="group" aria-label="Basic example" id="browse-card-filter">
+              <button type="button" class="filter-button" value="All" id="All" onclick="filterTour()">All</button>
+              <button type="button" class="filter-button" value="Cuisine" onclick="filterTour()" id="Cuisine">Cuisine</button>
+              <button type="button" class="filter-button" value="Theme" onclick="filterTour()" id="Theme">Theme</button>
+            </div>
+          </div>
+          <div class="row" id="browse-list">
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+      <div class="row banner" id="big-banner">
+        <div class="videoWrapper">
+          <!-- <div class="overlay">
+
+          </div> -->
+          <video autoplay muted loop id="myVideo">
+            <source src="./images/rain.mp4" type="video/mp4">
+          </video>
+        </div>
+
+
+      </div>
+      <div class="row banner">
+        <div class="container">
+          <h1 class="banner-title">Basics of the Tour</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./images/transport.png" class="tour-basic" />
+              <p class="banner-description">
+                Transport
+              </p>
+            </div>
+            <div class="col-md-4 tour-basic">
+              <img src="./images/welfare.png" class="tour-basic"  />
+              <p class="banner-description">
+                Transport
+              </p>
+            </div>
+            <div class="col-md-4 tour-basic">
+              <img src="./images/voucher.png"  class="tour-basic"/>
+              <p class="banner-description">
+                Transport
+              </p>
+            </div>
+
+
+            <!-- transport
+            welfare pack
+            attractions voucher -->
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row banner">
+        <div class="col-md-12">
+          <div class="row">
+            <h1 class="banner-title">Traveller's Experience</h1>
+          </div>
+          <div class="row">
+            <p class="banner-description">
+              Hear from our fellow travellers!
+            </p>
+          </div>
+        </div>
+
+        <div id="review-container" style="margin-left: 0px;">
+          <div class="review-card">
+            <img src="./images/profile-picture-1.jpg" class="profile-picture" />
+            <p class="review-content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <span class="reviewer-name">John Doe</span>
+            <br />
+            <span class="reviewer-title">CEO of Blabla</span>
+          </div>
+          <div class="review-card">
+            <img src="./images/profile-picture-1.jpg" class="profile-picture" />
+            <p class="review-content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <span class="reviewer-name">John Doe</span>
+            <br />
+            <span class="reviewer-title">CEO of Blabla</span>
+          </div>
+          <div class="review-card">
+            <img src="./images/profile-picture-1.jpg" class="profile-picture" />
+            <p class="review-content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <span class="reviewer-name">John Doe</span>
+            <br />
+            <span class="reviewer-title">CEO of Blabla</span>
+          </div>
+          <div class="review-card">
+            <img src="./images/profile-picture-1.jpg" class="profile-picture" />
+            <p class="review-content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <span class="reviewer-name">John Doe</span>
+            <br />
+            <span class="reviewer-title">CEO of Blabla</span>
+          </div>
+
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-9">
+
+              </div>
+              <div class="col-md-3">
+                <button class="review-button" onclick="seePrevious()"><</button>
+                <button class="review-button" onclick="seeNext()">></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
 
     </div>
     <footer class="footer">
@@ -203,11 +437,14 @@
 
 
 
-
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script   src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"   integrity="sha256-xI/qyl9vpwWFOXz7+x/9WkG5j/SVnSw21viy8fWwbeE="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/date.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
