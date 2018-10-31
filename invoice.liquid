@@ -1,0 +1,725 @@
+<!-- Winter Breeze -->
+<!-- Common Base Styling -->
+{% assign primary_font = "Helvetica Neue"%}
+{% assign primary_font_color = "#000" %} <!-- Black text color -->
+{% assign primary_font_size = "11px"%}
+{% assign secondary_font = "Helvetica Neue"%}
+{% assign secondary_font_color = "#444" %} <!-- Grey text color -->
+{% assign theme_color = "#000000"%}
+<script>
+    $.get("https://fonts.googleapis.com/css?family={{ primary_font | replace: " ", "+" }}:300,400,700").done(function(response) {
+          var pFontCss = response.replace(/ local\(.+?\)\,/g,"");
+          var pFontCode = '<style id="font-primary-9977" type="text/css">' + pFontCss + '</style>'
+          $('head').append(pFontCode);
+        });
+    {% if secondary_font != blank and secondary_font != primary_font %}
+        $.get("https://fonts.googleapis.com/css?family={{ secondary_font | replace: " ", "+" }}:300,400,700").done(function(response) {
+          var sFontCss = response.replace(/ local\(.+?\)\,/g,"");
+          var sFontCode = '<style id="font-secondary-9977" type="text/css">' + sFontCss + '</style>'
+          $('head').append(sFontCode);
+        });
+    {% endif %}
+</script>
+<script>
+    $.ajaxSetup({
+      cache: true
+    });
+    var url = "https://orderprintertemplates.com/JsBarcode.all.min.js";
+    var options = {
+      format: "CODE128",
+      width: 1,
+      height: 14,
+      quite: 1,
+      lineColor: "{{ primary_font_color }}",
+      displayValue: false, //Show the text below the barcode (can be true or false)
+      fontSize: {{ primary_font_size | remove: "px" | minus: 1 }},
+      font: "{{ primary_font }}",
+      textAlign: "left"
+    }
+    $.getScript( url, function() {
+      // Barcode Generator for Order Number
+      $(".barcode-{{ order_number }}").each(function(){
+        $(this).JsBarcode("{{ order_name }}",options);
+      });
+      // Barcode Generator for Products
+      $('.product-barcode').each(function(){
+          var productBarcode = String($(this).data('barcode'));
+          if (productBarcode != null || productBarcode != ''){
+            $(this).JsBarcode(productBarcode, options);
+          };
+       });
+    });
+</script>
+<script>
+    $(function () {
+         if (navigator.userAgent.indexOf('Safari') != -1 &&
+         navigator.userAgent.indexOf('Chrome') == -1) {
+             $("body").addClass("safari");
+         }
+       });
+</script>
+<style type="text/css">
+    /* ### BASE - PAGE SIZING AND MARGIN SETUP NORMALIZATION ACROSS BROWSERS ### */
+      @page {
+        margin: 12mm !important;
+        margin-top: 12mm !important;
+        margin-right: 12mm !important;
+        margin-bottom: 12mm !important;
+        margin-left: 12mm !important;
+      }
+      @media print {
+        .safari {
+          padding-top: 15px;
+        }
+        * {
+          overflow: visible !important;
+        }
+        .printer-preview-content .printer-preview-content {
+          padding-right: 10px;
+        }
+    /*    .printer-inline-preview .printer-preview-content .printer-preview-content {
+          page-break-before: always;
+        }
+        .printer-inline-preview-first .printer-preview-content .printer-preview-content {
+          page-break-before: avoid !important;
+        }*/
+      }
+      @media screen {
+        .printer-preview-content {
+          padding: 14px 0;
+          min-height: 800px;
+          /*background-image: url(http://basehold.it/i/14)*/
+        }
+        .printer-preview-content .printer-preview-content {
+          margin-right: auto;
+          margin-left: auto;
+          max-width: 620px;
+        }
+      }
+      @media screen,print {
+
+        /* ### BASE - TYPOGRAPHY AND REMOVAL OF STANDARD SHOPIFY STYLING ### */
+        .printer-preview-content .t9977 * {
+          color: {{ secondary_font_color }};
+          font-family: '{{ primary_font }}';
+          font-size: {{ primary_font_size }};
+          font-weight: 400;
+          line-height: 14px;
+          text-rendering: optimizeLegibility;
+          margin: 0 0 0 0;
+          padding: 0 0 0 0;
+          -webkit-print-color-adjust: exact;
+          overflow: visible !important;
+        }
+        .printer-preview-content .t9977 h1 {
+          font-size: 36px;
+          line-height: 42px;
+        }
+        .printer-preview-content .t9977 h2 {
+          font-size: 18px;
+          line-height: 28px;
+        }
+        .printer-preview-content .t9977 h3 {
+          font-size: 14px;
+          line-height: 28px;
+        }
+        .printer-preview-content .t9977 h1,
+        .printer-preview-content .t9977 h2,
+        .printer-preview-content .t9977 h3 {
+          margin-bottom: 14px;
+        }
+        .printer-preview-content .t9977 b,
+        .printer-preview-content .t9977 b * {
+          font-weight: bold;
+        }
+        .printer-preview-content .t9977 .text-right {
+          text-align: right;
+        }
+        .printer-preview-content .t9977 .text-center {
+          text-align: center;
+        }
+
+        /* ### BASE - GRID AND RE-USABLE LAYOUT COMPONENTS ### */
+        .printer-preview-content .t9977 .row {
+          width: 100%;
+          display: block;
+          clear: both;
+        }
+        .printer-preview-content .t9977 .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .printer-preview-content .t9977 .col-xs-1,
+        .printer-preview-content .t9977 .col-xs-2,
+        .printer-preview-content .t9977 .col-xs-3,
+        .printer-preview-content .t9977 .col-xs-4,
+        .printer-preview-content .t9977 .col-xs-5,
+        .printer-preview-content .t9977 .col-xs-6,
+        .printer-preview-content .t9977 .col-xs-7,
+        .printer-preview-content .t9977 .col-xs-8,
+        .printer-preview-content .t9977 .col-xs-9,
+        .printer-preview-content .t9977 .col-xs-10,
+        .printer-preview-content .t9977 .col-xs-11,
+        .printer-preview-content .t9977 .col-xs-12 {
+          float: left;
+          min-height: 1px;
+          margin-bottom: 28px;
+        }
+        .printer-preview-content .t9977 .col-xs-12 {
+          width: 100%;
+        }
+        .printer-preview-content .t9977 .col-xs-11 {
+          width: 91.66666667%;
+        }
+        .printer-preview-content .t9977 .col-xs-10 {
+          width: 83.33333333%;
+        }
+        .printer-preview-content .t9977 .col-xs-9 {
+          width: 75%;
+        }
+        .printer-preview-content .t9977 .col-xs-8 {
+          width: 66.66666667%;
+        }
+        .printer-preview-content .t9977 .col-xs-7 {
+          width: 58.33333333%;
+        }
+        .printer-preview-content .t9977 .col-xs-6 {
+          width: 50%;
+        }
+        .printer-preview-content .t9977 .col-xs-5 {
+          width: 41.66666667%;
+        }
+        .printer-preview-content .t9977 .col-xs-4 {
+          width: 33.33333333%;
+        }
+        .printer-preview-content .t9977 .col-xs-3 {
+          width: 25%;
+        }
+        .printer-preview-content .t9977 .col-xs-2 {
+          width: 16.66666667%;
+        }
+        .printer-preview-content .t9977 .col-xs-1 {
+          width: 8.33333333%;
+        }
+        .printer-preview-content .t9977 .col-no-margin {
+          margin-bottom: 0 !important;
+        }
+        .printer-preview-content .t9977 .clear-fix {
+          clear: both;
+        }
+        .printer-preview-content .t9977 .half-margin-top {
+          margin-top: 7px !important;
+        }
+        .printer-preview-content .t9977 .half-margin-bottom {
+          margin-bottom: 7px !important;
+        }
+        .printer-preview-content .t9977 .margin-top {
+          margin-top: 14px !important;
+        }
+        .printer-preview-content .t9977 .margin-bottom {
+          margin-bottom: 14px !important;
+        }
+        .printer-preview-content .t9977 .double-margin-top {
+          margin-top: 28px !important;
+        }
+        .printer-preview-content .t9977 .double-margin-bottom {
+          margin-bottom: 28px !important;
+        }
+
+        /* ### BASE - TABLE STYLING ### */
+        .printer-preview-content .t9977 table,
+        .printer-preview-content .t9977 .table {
+          width: 100%;
+          max-width: 100%;
+          background-color: transparent;
+          border-collapse: collapse;
+        }
+        .printer-preview-content .t9977 table tbody tr {
+          page-break-inside:avoid !important;
+          page-break-after:auto !important;
+        }
+        .printer-preview-content .t9977 table tbody tr td {
+          page-break-inside:avoid !important;
+        }
+        .printer-preview-content .t9977 th {
+          white-space: nowrap;
+          text-align: left;
+          vertical-align: middle;
+          border-top: 0;
+          border-bottom: 0;
+        }
+        .printer-preview-content .t9977 td {
+          vertical-align: top;
+          border-top: 0;
+          border-bottom: 0;
+        }
+        .printer-preview-content .t9977 .order-table tbody > tr:nth-child(odd) td {
+          background-color: #ffffff;
+        }
+        .printer-preview-content .t9977 .pricing-table tbody > tr:nth-child(even) > td {
+          background-color: #ffffff;
+        }
+        .printer-preview-content .t9977 th.order-table-qty {
+          width: 10%;
+        }
+        .printer-preview-content .t9977 th.order-table-price {
+          width: 10%;
+        }
+        .printer-preview-content .t9977 th.order-table-item-total,
+        .printer-preview-content .t9977 th.order-table-reason {
+          width: 15%;
+        }
+        .printer-preview-content .t9977 th.order-table-return-comments {
+          width: 30%;
+        }
+        .printer-preview-content .t9977 .pricing-table-text {
+          text-align: right;
+          white-space: nowrap;
+        }
+
+        /* ### BASE - PRODUCT IMAGE SIZING TO RETAIN LINE HEIGHT RYTHM) ### */
+        .printer-preview-content .t9977 .product-image-wrapper {
+          width: 0px;
+          height: 0px;
+        }
+        .printer-preview-content .t9977 .product-image {
+          padding: 0 4px;
+          page-break-inside:avoid !important;
+          max-width: 0px;
+        }
+
+        /* ### BASE - LISTS RESET ### */
+        .printer-preview-content .t9977 ul {
+          list-style: none;
+        }
+        .printer-preview-content .t9977 li {
+          color: {{ secondary_font_color }};
+          list-style: none;
+        }
+
+        /* ### BASE - LOGO ### */
+        .printer-preview-content .t9977 .logo-wrapper {
+          display: inline-block;
+          width: 100%;
+        }
+        .printer-preview-content .t9977 .logo {
+          float: left;
+          padding-right: 15px;
+          max-width: 100%;
+          max-height: 94.0px;
+        }
+
+        /* ### BASE - BARCODE ### */
+        .printer-preview-content .t9977 .order-number-barcode,
+        .printer-preview-content .t9977 .product-barcode {
+          display: block;
+        }
+
+        /* ### BASE - ADDITONAL COMMON SHARED TYPOGRAPHY AND ALIGNMENT ### */
+        .printer-preview-content .t9977 .address {
+          margin-right: 5%;
+        }
+        .printer-preview-content .t9977 .notes-title,
+        .printer-preview-content .t9977 .return-codes {
+          margin: 7px 0;
+        }
+        /* ### BASE - HORIZONTAL RULE MARKS ### */
+        .printer-preview-content .t9977 hr {
+          background: {{ theme_color }};
+          border-top: 0;
+          border: 0;
+          height: 2px;
+          width: 100%;
+          margin-bottom: -2px;
+        }
+
+      }
+</style>
+<!-- Template Specific Styling -->
+<style type="text/css">
+    @media screen,print {
+
+      /* ### DESIGN SPECIFIC - TYPOGRAPHY ### */
+      .printer-preview-content .t9977 h1 {
+        font-family: '{{ secondary_font }}';
+        font-weight: bold;
+        color: {{ theme_color }};
+      }
+      .printer-preview-content .t9977 h2 {
+        font-family: '{{ secondary_font }}';
+      }
+      .printer-preview-content .t9977 h3 {
+        font-family: '{{ secondary_font }}';
+        color: {{ theme_color }};
+      }
+
+      /* ### DESIGN SPECIFIC - LOGO POSITIONING ### */
+      .printer-preview-content .t9977 .logo {
+        float: right;
+        padding-right: 0;
+        margin: 14px 0;
+      }
+
+      /* ### DESIGN SPECIFIC - STORE DETAILS ### */
+      .printer-preview-content .t9977 .shop-block {
+        text-align: center;
+      }
+      .printer-preview-content .t9977 .shop-block .shop-address-block b,
+      .printer-preview-content .t9977 .shop-block .shop-address-block b * {
+        color: {{ primary_font_color }};
+      }
+      .printer-preview-content .t9977 .shop-block .shop-domain {
+        color: {{ theme_color }};
+      }
+
+      .printer-preview-content .t9977 .shop-return-address b,
+      .printer-preview-content .t9977 .shop-return-address b * {
+        color: {{ primary_font_color }};
+      }
+
+      /* ### DESIGN SPECIFIC - ORDER DETAILS ### */
+      .printer-preview-content .t9977 .order-details-title {
+        display: inline-block;
+        font-weight: bold;
+        color: {{ primary_font_color }};
+      }
+
+      /* ### DESIGN SPECIFIC - BILL TO AND SHIP TO ADDRESS ### */
+      .printer-preview-content .t9977 .address-title {
+        font-weight: bold;
+        color: {{ primary_font_color }};
+      }
+
+      /* ### DESIGN SPECIFIC - TABLE HEADER ### */
+      .printer-preview-content .t9977 .order-table thead tr th {
+        padding-left: 4px;
+        padding-right: 4px;
+        border-top: 2px solid {{ theme_color }};
+        padding-top: 5px;
+        border-bottom: 2px solid #d3d3d3;
+        padding-bottom:5px;
+        font-weight: bold;
+        color: {{ theme_color }};
+      }
+
+      /* ### DESIGN SPECIFIC - TABLE BODY (SHARED) ### */
+      .printer-preview-content .t9977 .order-table tbody tr td,
+      .printer-preview-content .t9977 .pricing-table tbody tr td {
+        padding-left: 4px;
+        padding-right: 4px;
+        border-top: 0;
+        padding-top: 7px;
+        border-bottom: 1px solid #d3d3d3;
+        padding-bottom:6px;
+      }
+      /* ### DESIGN SPECIFIC - ORDER TABLE SPECIFIC ### */
+      .printer-preview-content .t9977 .order-table tbody > tr > td.line-item-description,
+      .printer-preview-content .t9977 .order-table tbody > tr > td.line-item-qty {
+        font-weight: bold;
+        color: {{ primary_font_color }};
+      }
+      .printer-preview-content .t9977 .order-table tbody > tr > td.line-item-description p.line-item-sku {
+        font-weight: normal;
+      }
+      /* ### DESIGN SPECIFIC - PRICING TABLE SPECIFIC ### */
+      .printer-preview-content .t9977 .pricing-table tbody > tr.pricing-table-total-row > td {
+        border-top: 2px solid {{ theme_color }};
+        border-bottom: 2px solid {{ theme_color }};
+        padding-bottom:5px;
+      }
+      .printer-preview-content .t9977 .pricing-table tbody > tr > td.pricing-table-title {
+        font-weight: bold;
+        color: {{ primary_font_color }};
+      }
+      .printer-preview-content .t9977 .pricing-table tbody > tr.pricing-table-total-row .pricing-table-title,
+      .printer-preview-content .t9977 .pricing-table tbody > tr.pricing-table-total-row .pricing-table-text {
+        font-weight: bold;
+        color: {{ primary_font_color }};
+      }
+
+      /* ### DESIGN SPECIFIC - ORDER NOTES ### */
+      .printer-preview-content .t9977 .notes-title {
+        font-weight: bold;
+        color: {{ primary_font_color }};
+      }
+
+      /* ### DESIGN SPECIFIC - RETURN FORM REASON CODES ### */
+      .printer-preview-content .t9977 .return-codes b,
+      .printer-preview-content .t9977 .return-code b * {
+        font-weight: bold;
+        color: {{ primary_font_color }};
+      }
+
+      /* ### DESIGN SPECIFIC - THANK YOU MESSAGE ### */
+      .printer-preview-content .t9977 .thanks-text {
+        text-align: center;
+        font-weight: bold;
+        color: {{ theme_color }};
+      }
+      .printer-preview-content .t9977 .thanks-text * {
+        font-weight: bold;
+        color: {{ theme_color }};
+      }
+
+      /* ### DESIGN SPECIFIC - GIFT MESSAGE ### */
+      .printer-preview-content .t9977 .gift-text {
+        text-align: center;
+        font-weight: bold;
+        width: 80%;
+        margin: 0 10%;
+        padding-bottom:14px;
+        font-size: 18px;
+      }
+      .printer-preview-content .t9977 .gift-text * {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .printer-preview-content .t9977 .gift-text svg {
+        padding-bottom:7px;
+      }
+
+      /* ### DESIGN SPECIFIC - TERMS AND CONDITIONS ### */
+      .printer-preview-content .t9977 .terms-text {
+        font-size: 9px;
+        text-align: center;
+      }
+      .printer-preview-content .t9977 .terms-text * {
+        font-size: 9px;
+      }
+
+      /* ### DESIGN SPECIFIC - SOCIAL ICONS ### */
+      .printer-preview-content .t9977 .social-icons {
+        display: inline;
+        width: 20px;
+        margin: 7px 4px;
+      }
+
+    }
+</style>
+<div class="printer-preview-content" contenteditable="true" spellcheck="false" title="Click to edit text (changes will be printed but not saved)">
+    <div class="t9977">
+        <div class="row">
+            <div id="header-row">
+                <div class="col-xs-6">
+                    <div class="template-title">
+                        <h1 class="editable" data-key="template_type_name" style="font-size: 30px;">Purchase Order</h1>
+                    </div>
+                    <ul class="order-details">
+                        <li class="order-details-invoice">
+                            <span class="order-details-title editable" data-key="invoice_number">Purchase Order No.</span>
+                            <span class="order-details-text">{{ order_name }}</span>
+                        </li>
+                        <img class="barcode-{{ order_number }} order-number-barcode">
+                        <li class="order-details-date">
+                            <span class="order-details-title editable" data-key="date">Order Date</span>
+                            <span class="order-details-text">{{ date | date: "%d %B, %Y" }}</span>
+                        </li>
+                        {% comment %}
+                        <li class="order-details-payment">
+                            <span class="order-details-title editable" data-key="payment_method">Payment</span>
+                            <span class="order-details-text">{% for transaction in transactions %}
+                                    {% if transaction.status != "failure" and transaction.status != "error" %}
+                                        {% if transaction.kind == "authorization" or transaction.kind == "sale" %}
+                                            {% if transaction.payment_details.credit_card_number %}
+                                                {{ transaction.payment_details.credit_card_company }}{% break %}
+                                            {% else %}
+                                                {{ transaction.gateway }}{% break %}
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}</span>
+                        </li>
+
+                        <li class="order-details-shipping">
+                            <span class="order-details-title editable" data-key="shipping_method">Shipping</span>
+                            <span class="order-details-text">{{ shipping_method.title }}</span>
+                        </li>
+                        <li class="order-details-email">
+                            <span class="order-details-title editable" data-key="customer_email">Email</span>
+                            <span class="order-details-text">{{ email }}</span>
+                        </li>
+                        {% endcomment %}
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-no-margin">
+                    <div class="logo-wrapper">
+                        <img alt="Logo" class="logo" src="https://cdn.shopify.com/s/files/1/0436/3189/files/JEC-Logo-2016.jpg?11329507038565474974" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2">
+                <div class="address-title bill-to-title editable" data-key="bill_to">Billing Address<br>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <ul class="address">
+                    <li>Jump Eat Cry</li>
+                    {% comment %}
+                    {% if billing_address.company != blank %}
+                        <li>{{ billing_address.company }}</li>
+                    {% endif %}
+                    {% endcomment %}
+                    <li>100G Pasir Panjang Road</li>
+                    <li>#06-09, Interlocal Center</li>
+                    <li>Singapore, 118523</li>
+                </ul>
+            </div>
+            <div class="col-xs-2">
+                {% if shipping_address and shipping_address != "" and shipping_address != nil %}
+                    <div class="address-title ship-to-title editable" data-key="ship_to">Shipping Address<br>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-xs-4">
+                <ul class="address">
+                    {% if shipping_address and shipping_address != "" and shipping_address != nil %}
+                        <li>{{ shipping_address.name }}</li>
+                        {% if shipping_address.company != blank %}
+                            <li>{{ shipping_address.company }}</li>
+                        {% endif %}
+                        <li>{{ shipping_address.address1 }}</li>
+                        {% if shipping_address.address2 != blank %}
+                            <li>{{ shipping_address.address2 }}</li>
+                        {% endif %}
+                        <li>{{ shipping_address.city }}, {% if shipping_address.province_code != blank %}{{ shipping_address.province_code }}{% else %}{{ shipping_address.province }}{% endif %} {{ shipping_address.zip | upcase }}</li>
+                        {% if shop.country != shipping_address.country %}
+                            <li>{{ shipping_address.country }}</li>
+                        {% endif %}
+                        <li><span class="editable" data-key="tel">Tel:</span> {{ shipping_address.phone }}</li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-no-margin">
+                <table class="order-table table">
+                    <thead>
+                        <tr>
+                            <th class="order-table-title editable" data-key="item">Item Description</th>
+                            <th class="order-table-qty text-center editable" data-key="qty">Qty</th>
+                            <th class="order-table-price text-right editable" data-key="price">Price</th>
+                            <th class="order-table-item-total text-right editable" data-key="item_total">Item Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% assign line_items = line_items | sort: "sku" %}
+                        {% assign hegen_subtotal = 0 %}
+
+                        {% for line_item in line_items %}
+                          {% if line_item.title contains "Hegen" %}
+                            <tr>
+                                <td class="line-item-description">
+                                    {{ line_item.title | replace: " - Default Title", "" }}
+
+                                        <p class="line-item-sku"> {% if line_item.sku != blank %}
+                                      {% if line_item.quantity > 1 %}
+                                            {{ line_item.quantity }} x
+                                         {%endif%}{{ line_item.sku }}</p>
+                                    {% endif %}
+                                    <img class="product-barcode" data-barcode="{{ line_item.variant.sku }}">
+                                </td>
+                                <td class="text-center line-item-qty">× {{ line_item.quantity }}</td>
+                                {% if line_item.variant.price > line_item.price %}
+                                    {% assign original_price = line_item.variant.price %}
+                                {% elsif line_item.variant.compare_at_price > line_item.price %}
+                                    {% assign original_price = line_item.variant.compare_at_price %}
+                                {% else %}
+                                    {% assign original_price = 0 %}
+                                {% endif %}
+                                <td class="text-right no-wrap line-item-price">
+                                    {% if original_price > 0 %}
+                                      {% if line_item.title contains "Electric Breast Pump" %}
+                                        <s>{{ original_price | times: 0.75 | money }}</s><br>
+                                      {% else %}
+                                        <s>{{ original_price | times: 0.7 | money }}</s><br>
+                                      {% endif %}
+                                    {% endif %}
+                                    {% if line_item.title contains "Electric Breast Pump" %}
+                                      {{ line_item.price | times: 0.75 | money }}
+
+                                    {% else %}
+                                      {{ line_item.price | times: 0.7 | money }}
+                                    {% endif %}
+
+                                </td>
+                                <td class="text-right no-wrap line-item-line-price">
+                                  {% if line_item.title contains "Electric Breast Pump" %}
+                                    {{ line_item.line_price | times: 0.75 | money }}
+                                    {% assign price = line_item.line_price | times: 0.75 %}
+                                    {% assign hegen_subtotal = hegen_subtotal | plus: price %}
+                                  {% else %}
+                                    {{ line_item.line_price | times: 0.7 | money }}
+                                    {% assign price = line_item.line_price | times: 0.7 %}
+                                    {% assign hegen_subtotal = hegen_subtotal | plus: price %}
+                                  {% endif %}
+
+
+                                </td>
+                            </tr>
+                          {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="notes">
+                    <div class="notes-title editable" data-key="order_notes">Notes</div>
+                    <div class="notes-text">{{ note | newline_to_br }}</div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <table class="pricing-table table">
+                    <tbody>
+                        <br />
+                        <br />
+                        <br />
+                        <tr class="pricing-table-total-row">
+                            <td class="pricing-table-title editable" data-key="total">Total</td>
+                            <td class="pricing-table-text">{{ hegen_subtotal   | money }}</td>
+                        </tr>
+                        {% assign total_refunds =  0.0 %}
+                        {% for transaction in transactions %}
+                            {% if transaction.kind == "refund" %}
+                                <tr>
+                                    <td class="pricing-table-title editable" data-key="refund">Refund</td>
+                                    <td class="pricing-table-text">-{{ transaction.amount | money }}</td>
+                                    {% assign total_refunds = total_refunds | plus: transaction.amount %}
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+          <br />
+          <br />
+        </div>
+        <div class="row">
+            <div class="col-xs-12 shop-block">
+                <div class="shop-address-block full-editable" data-key="shop_block">
+                    <p>
+                        <b>Jump Eat Cry</b>
+                    </p>
+                    <p>100G Pasir Panjang Road #06-09, Interlocal Centre, Singapore 118523</p>
+                    <p>E: askus@jumpeatcry.com</p>
+                    <p>Follow us on social media: @jumpeatcry<br>
+                    </p>
+                </div>
+                <div class="shop-social">
+                    <img class="social-icons" src="https://cdn.shopify.com/s/files/1/0398/5025/files/Fb_icon.jpg?11755453313570768267"/>
+                    <img class="social-icons" src="https://cdn.shopify.com/s/files/1/0398/5025/files/twitter_Icon.png?11314827648007113849"/>
+                    <img class="social-icons" src="https://cdn.shopify.com/s/files/1/0398/5025/files/IG-_ICon.png?11755453313570768267"/>
+                </div>
+                <div class="shop-domain editable" data-key="shop_domain">
+                    www.jumpeatcry.com
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

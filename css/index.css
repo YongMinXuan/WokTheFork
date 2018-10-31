@@ -152,13 +152,65 @@
   align-items: center;
 }
 .tour-basic{
-  max-height: 200px;
+  max-height: 150px;
   margin: auto auto;
   display: block;
+  /* border: 1px solid black; */
 }
-#voucher{
-  height: 150px;
+.tour-basic-description {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+#subscribe{
+  /* background-image: url('../images/prawn-mee.jpg'); */
+  max-height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 @media only screen and (max-width: 768px){
+  .date-picker, .dropdown-menu{
+    width: 100%;
+  }
+  #trip-advisor-image{
+    height: 100px;
+    margin: auto auto;
+  }
+  .banner-description{
+    padding: 10px;
+  }
+  #myVideo{
+    max-height: 200px;
+  }
+  #review-container{
+    padding: 10px;
+    overflow: visible;
+    height: 100%;
+    /* margin: 20px 0px; */
+    white-space: normal;
+  }
+  /* #review-container{
+    white-space: nowrap;
+    position: relative;
+  } */
+  .review-card{
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    display: block;
+    margin: 80px 30px;
+  }
+  /* .review-card {
+    height: 200px;
+    width: 500px;
+    background-color: #fff;
+    margin: 20px 30px;
+    display: inline-block;
+  } */
+  .review-button{
+    display: none;
+  }
 
 }
