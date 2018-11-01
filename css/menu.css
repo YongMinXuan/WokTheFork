@@ -1,6 +1,6 @@
-.main_h {
+ .main_h {
   position: fixed;
-  top: 10px;
+  /* top: 10px; */
   max-height: 70px;
   z-index: 10;
   width: 100%;
