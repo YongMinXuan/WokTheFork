@@ -1,4 +1,5 @@
 .main_h {
+  margin-top: -10px;
   position: fixed;
   top: 10px;
   max-height: 70px;
