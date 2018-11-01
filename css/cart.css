@@ -21,7 +21,7 @@
 .form-label{
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 14px;
 }
 .btn, .form-control{
   padding: 10px 15px;
@@ -48,4 +48,30 @@
   margin-top: 20%;
   font-weight: 600;
   font-size: 60px;
+}
+.input-row{
+  margin: 20px 0px;
+}
+.address-input{
+  margin: 10px 0px;
+}
+
+.checkout-box{
+  /* background-color: rgb(251, 251, 251); */
+  border: 2px solid #ccc;
+  padding: 40px;
+}
+.subtotal-and-total{
+  font-weight: 600;
+}
+.credit-card{
+  position: relative;
+}
+input[type="radio"]{
+  position: relative;
+  bottom: 15px;
+
+}
+.align-right{
+  text-align: right;
 }
