@@ -38,7 +38,7 @@
   opacity: 0.5;
 }
 .carousel-item{
-  max-height: 90vh;
+  /* max-height: 512px; */
   overflow: hidden;
 }
 .carousel-item > img {
