@@ -41,19 +41,19 @@
 
             <nav>
                 <ul>
-                    <li><a class="nav-link" href="#">Home</a></li>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
                     <li><a class="nav-link" href="#" >
                       Cuisines
                     </a>
                     </li>
                     <li><a class="nav-link" href="#">Themes</a></li>
-                    <li><a class="nav-link" href="#">About Us</a></li>
-                    <li><a class="nav-link" href="#">Blog</a></li>
+                    <li><a class="nav-link" href="about.html">About Us</a></li>
+                    <li><a class="nav-link" href="blog.html">Blog</a></li>
                     <li>
                       <a class="nav-link" href="#">Corporate Events</a>
                     </li>
                     <li>
-                      <a class="nav-link" href="#">Contact Us</a>
+                      <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                 </ul>
             </nav>
@@ -109,90 +109,105 @@
               <div class="row input-row">
                 <div class="col-md-12">
                   <span class="form-label">Town / City</span>
-                  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control" placeholder="Town / City" aria-describedby="basic-addon1">
 
                 </div>
               </div>
               <div class="row input-row">
                 <div class="col-md-12">
                   <span class="form-label">Postcode / ZIP</span>
-                  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control" placeholder="Postcode / ZIP" aria-describedby="basic-addon1">
 
                 </div>
               </div>
               <div class="row input-row">
                 <div class="col-md-6">
                   <span class="form-label">Phone</span>
-                  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control" placeholder="Country code and number" aria-describedby="basic-addon1">
                 </div>
                 <div class="col-md-6">
                   <span class="form-label">Email Address</span>
-                  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control" placeholder="Your email address" aria-describedby="basic-addon1">
                 </div>
               </div>
               <div class="row input-row">
                 <div class="col-md-12">
                   <span class="form-label">additional information</span>
-                  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+                  <textarea rows="6" class="form-control" placeholder="Any additional comments? (optional)" aria-describedby="basic-addon1"></textarea>
 
                 </div>
               </div>
+
             </div>
             <div class="col-md-6">
               <div class="container-fluid checkout-box">
                 <h2 class="banner-title">Your order</h2>
                 <br />
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-6 col-6">
                     <span class="form-label">product</span>
                   </div>
-                  <div class="col-md-6 align-right">
+                  <div class="col-md-6 col-6 align-right">
                     <span class="form-label">total</span>
                   </div>
                 </div>
                 <hr />
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-6 col-6">
                     CRA Themes Tour Package <strong>x 4</strong>
                   </div>
-                  <div class="col-md-6 align-right">
+                  <div class="col-md-6 col-6 align-right">
                     $200.00
                   </div>
                 </div>
                 <hr />
                 <div class="row">
-                  <div class="col-md-6 subtotal-and-total">
+                  <div class="col-md-6 col-6 subtotal-and-total">
                     Subtotal
                   </div>
-                  <div class="col-md-6 subtotal-and-total align-right">
+                  <div class="col-md-6 col-6 subtotal-and-total align-right">
                     $200.00
                   </div>
                 </div>
                 <hr />
                 <div class="row">
-                  <div class="col-md-6 subtotal-and-total">
+                  <div class="col-md-6 col-6 subtotal-and-total">
                     Total
                   </div>
-                  <div class="col-md-6 subtotal-and-total align-right">
+                  <div class="col-md-6 col-6 subtotal-and-total align-right">
                     $200.00
                   </div>
                 </div>
                 <hr />
                 <div class="row">
                   <div class="col-md-4 credit-card" style="position: relative;">
-                    <input type="radio" style="position: relative; bottom: 15px;" >
-                    <label><i class="fab fa-cc-visa fa-3x"></i></label>
+                    <input type="radio" name="payment" style="position: relative; bottom: 15px;" >
+                    <i class="fab fa-cc-visa fa-3x credit-card-option"></i>
 
 
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-4 credit-card">
                     <input type="radio" name="payment" />
-                    <i class="fab fa-cc-mastercard fa-3x"></i>
+                    <i class="fab fa-cc-mastercard fa-3x credit-card-option"></i>
 
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-4 credit-card">
                     <input type="radio" name="payment" />
-                    <i class="fab fa-cc-paypal fa-3x"></i>
+                    <i class="fab fa-cc-paypal fa-3x credit-card-option"></i>
+                  </div>
+                </div>
+                <div class="row" id="checkout-cc-detail">
+
+                </div>
+                <div class="row input-row">
+                  <div class="col-md-2">
+
+                  </div>
+                  <div class="col-md-8">
+                    <a href="#" class="btn btn-sm animated-button victoria-four">Place Order</a>
+                  </div>
+                  <div class="col-md-2">
+
                   </div>
                 </div>
               </div>
