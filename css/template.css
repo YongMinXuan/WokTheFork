@@ -13,7 +13,7 @@ ul{
 }
 
 
-header {
+/* header {
   position: fixed;
   top: 0;
   left: 0;
@@ -21,10 +21,8 @@ header {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 100%;
   padding: 10px 0px;
-  border-bottom: 1px solid #ccc;
-  background-color: white;
 
-}
+} */
 .nav-link{
   padding: 0px;
 }
@@ -49,9 +47,10 @@ header {
   color: red;
 }
 .footer{
-  background-color: rgb(32, 33, 33);
+  background-color: #383838;
   color: white;
   padding: 30px 0px;
+  font-size: 14px;
 }
 .footer-header{
   font-weight: 600;
@@ -70,7 +69,16 @@ header {
     padding: 0.25rem 0.5rem;
   }
 } */
-
+.footer-logo{
+  height: 80px;
+  margin: auto;
+  display: block;
+}
+.footer-social-media-icon{
+  color: white;
+  margin: 0px 10px;
+  text-align: center;
+}
 @media only screen and (max-width: 768px){
 
 }
