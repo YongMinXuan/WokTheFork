@@ -1,0 +1,331 @@
+.header-avatar {
+    vertical-align: middle;
+}
+
+.avatar-60px {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid black;
+    vertical-align: middle;
+}
+
+.truncate-line-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    height: 20px;
+}
+
+.truncate-line-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.text-small {
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.text-small > a {
+    color: gray;
+    text-decoration: none;
+}
+
+.text-small > a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.text-small-black > a {
+    color: black;
+    text-decoration: none;
+}
+
+.text-small-black > a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.text-light-grey {
+    color: gray;
+}
+
+.blog_image {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.blog_title {
+    font-size: 50px;
+    padding-left: 10px;
+}
+
+.blog_images {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    /* height: 500px; */
+}
+
+.name {
+    margin-left: 5%;
+}
+
+@media only screen and (max-width: 768px) {
+    .name {
+        margin-left: 0;
+    }
+    .text-center .subtitle {
+        
+        margin-left: 0;
+       
+    }
+
+   .blog_images{
+      max-height: 339px;
+   }
+}
+
+.subtitle {
+    font-family: roboto;
+    margin-left:7%;
+    font-size: 20px;
+}
+
+article {
+    display: grid;
+    /* I'm using 440px instead of 740px as it makes it easier to view it in the Scrimba simulator additive-symbols: */
+    grid-template-columns: 1fr 1fr 10px 640px 10px 1fr 1fr;
+}
+
+article > * {
+    grid-column: 4;
+}
+
+article > figure {
+    grid-column: 1 / -1;
+    margin: 20px 0;
+}
+
+article > .aside {
+    grid-column: 5 / -1;
+}
+
+article > blockquote {
+    grid-column: 3 / span 2;
+    margin: 0;
+    color: #666;
+    border-left: 3px solid black;
+    padding-left: 10px;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    article {
+        display: grid;
+        /* I'm using 440px instead of 740px as it makes it easier to view it in the Scrimba simulator additive-symbols: */
+        grid-template-columns: 1fr 1fr 10px 200px 10px 1fr 1fr;
+    }
+    article > * {
+        grid-column: 4;
+    }
+    article > figure {
+        grid-column: 1 / -1;
+        margin: 20px 0;
+    }
+    article > .aside {
+        grid-column: 5 / -1;
+    }
+    article > blockquote {
+        grid-column: 3 / span 2;
+        margin: 0;
+        color: #666;
+        border-left: 3px solid black;
+        padding-left: 10px;
+    }
+}
+
+.wrapper {
+    background: #ffffff;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.content-wrapper {
+    width: 100%;
+    margin: auto;
+    padding: 0 10% 10%;
+    font-family: roboto;
+}
+
+@media (max-width: 640px) {
+    .content-wrapper {
+        position:relative;
+        width: 100%;
+        padding: 10% 2%;
+        margin-top:10%;
+    }
+}
+
+.content-wrapper:first-letter {
+    font-size: 80px;
+}
+
+.content-wrapper .image-right {
+    padding: 5% 0 5% 5%;
+    width: 50%;
+    float: right;
+    opacity: 0.8;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.6s;
+    -o-transition-duration: 0.6s;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -moz-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    font-size: 80%;
+    font-style: italic;
+    line-height: 20px;
+}
+
+@media (max-width: 900px) {
+    .content-wrapper .image-right {
+        width: 100%;
+        float: left;
+        padding: 0 0 5%;
+    }
+}
+
+.content-wrapper .image-right img {
+    margin: 0 0 10px;
+}
+
+.content-wrapper .image-right:hover {
+    opacity: 1;
+}
+
+.content-wrapper .image-left {
+    padding: 5% 5% 5% 0;
+    width: 50%;
+    float: left;
+    opacity: 0.8;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.6s;
+    -o-transition-duration: 0.6s;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -moz-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    font-size: 80%;
+    /* font-style: italic; */
+    line-height: 20px;
+}
+
+@media (max-width: 900px) {
+    .content-wrapper .image-left {
+        width: 100%;
+        padding: 0 0 5%;
+    }
+}
+
+.content-wrapper .image-left img {
+    margin: 0 0 10px;
+}
+
+.content-wrapper .image-left:hover {
+    opacity: 1;
+}
+
+.content-wrapper .image-center {
+    padding: 5% 0;
+    width: 169%;
+    position: relative;
+    margin-left: -35%;
+}
+
+@media (max-width: 640px) {
+    .content-wrapper .image-center {
+        width: 127%;
+        margin-left: -13%;
+    }
+}
+
+.font {
+    font-family: roboto;
+    font-size: 21px;
+}
+
+.subtext {
+    font-family: roboto;
+    font-size: 25px;
+}
+
+.title_font {
+    font-family: roboto;
+    font-size: 28px;
+}
+
+.blogtitle {
+    margin: auto;
+    padding-bottom: 30px;
+    font-size: 42px;
+    font-family:roboto;
+}
+
+.banner-title2{
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  font-weight: bold;
+  margin-top:10%;
+}
+
+
+.breakfast2{
+background-image: url('../images/singapore-local-restaurants.jpg');
+background-repeat: no-repeat;
+background-position: center;
+height: 350px;
+background-size: cover;
+}
+
+.articles{
+  position: relative;
+  margin-top: -20%;
+
+}
