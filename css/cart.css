@@ -70,8 +70,16 @@
 input[type="radio"]{
   position: relative;
   bottom: 15px;
-
+  margin-right: 20px;
 }
 .align-right{
   text-align: right;
+}
+.credit-card-option{
+  color: #aaa;
+}
+@media only screen and (max-width: 1000px){
+  .mobile-spacing{
+    margin: 10px 0px;
+  }
 }
