@@ -1,4 +1,10 @@
+a.block.content{
+  color: black;
+}
 
+a .block:hover {
+  text-decoration: none;
+}
 
 .wrapper {
   display: -webkit-box;
@@ -25,7 +31,7 @@
   transition: transform 1s;
   position: relative;
   top: 0;
- 
+
 
   /* padding-bottom: 40px; */
 }
@@ -67,7 +73,7 @@
   /* max-width: 100%; */
   width: 90%;
   margin: auto;
-  
+
 }
 
 .paragraph{
@@ -92,7 +98,7 @@
   min-height: 200px;
 }
 
-.cafe{  
+.cafe{
   background: url(../images/kueh.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -112,5 +118,3 @@
   background-size: cover;
   min-height: 450px;
 }
-
-
