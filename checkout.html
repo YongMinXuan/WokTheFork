@@ -11,6 +11,16 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128564521-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-128564521-1');
+    </script>
+
 
     <!-- Bootstrap Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -41,19 +51,19 @@
 
             <nav>
                 <ul>
-                    <li><a class="nav-link" href="#">Home</a></li>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
                     <li><a class="nav-link" href="#" >
                       Cuisines
                     </a>
                     </li>
                     <li><a class="nav-link" href="#">Themes</a></li>
-                    <li><a class="nav-link" href="#">About Us</a></li>
-                    <li><a class="nav-link" href="#">Blog</a></li>
+                    <li><a class="nav-link" href="about.html">About Us</a></li>
+                    <li><a class="nav-link" href="blog.html">Blog</a></li>
                     <li>
                       <a class="nav-link" href="#">Corporate Events</a>
                     </li>
                     <li>
-                      <a class="nav-link" href="#">Contact Us</a>
+                      <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                 </ul>
             </nav>
@@ -68,87 +78,154 @@
 
         </div>
       </div>
+
       <div class="row banner">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <span class="form-label">Product</span>
-            </div>
-            <div class="col-md-2">
-              <span class="form-label">Price</span>
-            </div>
-            <div class="col-md-1">
-              <span class="form-label">Pax</span>
-            </div>
-            <div class="col-md-2">
-              <span class="form-label">Total</span>
-            </div>
+              <h2 class="banner-title">Billing details</h2>
+              <div class="row input-row">
+                <div class="col-md-6">
+                  <span class="form-label">First name</span>
+                  <input type="text" class="form-control" placeholder="Please enter your first name" aria-describedby="basic-addon1">
 
-          </div>
-          <hr />
-          <div class="row">
-            <div class="col-md-6  cart-row">
-              CRA Themes Tour Package
-            </div>
-            <div class="col-md-2 cart-row">
-              $50.00
-            </div>
-            <div class="col-md-1 cart-row">
-              <div class="input-group mb-3">
-                <input type="number" class="form-control"  aria-describedby="basic-addon1"value="1">
+
+                </div>
+                <div class="col-md-6">
+                  <span class="form-label">Last name</span>
+                  <input type="text" class="form-control" placeholder="Please enter your last name" aria-describedby="basic-addon1">
+
+                </div>
               </div>
-            </div>
-            <div class="col-md-2 cart-row">
-              $<span id="subtotal">50.00</span>
-            </div>
-            <div class="col-md-1 cart-row">
-              <i class="fas fa-times"></i>
-            </div>
-          </div>
-          <hr />
-          <div class="row">
-            <div class="col-md-2">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Coupon Code" aria-describedby="basic-addon1">
+              <div class="row input-row">
+                <div class="col-md-12">
+                  <span class="form-label">Company name</span>
+                  <input type="text" class="form-control" placeholder="Company Name" aria-describedby="basic-addon1">
+                </div>
               </div>
-            </div>
-            <div class="col-md-2">
-              <a href="#" class="btn btn-sm animated-button victoria-four">Apply Coupon</a>
+              <div class="row input-row">
+                <div class="col-md-12">
+                  <span class="form-label">Country</span>
+                  <input type="text" class="form-control" placeholder="Country" aria-describedby="basic-addon1">
+                </div>
+              </div>
+              <div class="row input-row">
+                <div class="col-md-12">
+                  <span class="form-label">Street Address</span>
+                  <input type="text" class="form-control address-input" placeholder="House number and street name" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control  address-input" placeholder="Apartment, Suite, Unit, etc (optional)" aria-describedby="basic-addon1">
+                </div>
+              </div>
+              <div class="row input-row">
+                <div class="col-md-12">
+                  <span class="form-label">Town / City</span>
+                  <input type="text" class="form-control" placeholder="Town / City" aria-describedby="basic-addon1">
+
+                </div>
+              </div>
+              <div class="row input-row">
+                <div class="col-md-12">
+                  <span class="form-label">Postcode / ZIP</span>
+                  <input type="text" class="form-control" placeholder="Postcode / ZIP" aria-describedby="basic-addon1">
+
+                </div>
+              </div>
+              <div class="row input-row">
+                <div class="col-md-6">
+                  <span class="form-label">Phone</span>
+                  <input type="text" class="form-control" placeholder="Country code and number" aria-describedby="basic-addon1">
+                </div>
+                <div class="col-md-6">
+                  <span class="form-label">Email Address</span>
+                  <input type="text" class="form-control" placeholder="Your email address" aria-describedby="basic-addon1">
+                </div>
+              </div>
+              <div class="row input-row">
+                <div class="col-md-12">
+                  <span class="form-label">additional information</span>
+                  <textarea rows="6" class="form-control" placeholder="Any additional comments? (optional)" aria-describedby="basic-addon1"></textarea>
+
+                </div>
+              </div>
+
             </div>
             <div class="col-md-6">
-
-            </div>
-            <div class="col-md-2">
-              <a href="#" class="btn btn-sm animated-button victoria-four">Update Cart</a>
-            </div>
-          </div>
-          <div class="row" style="margin-top: 50px;">
-            <div class="col-md-7">
-
-            </div>
-            <div class="col-md-5">
-              <h4 class="banner-title">Cart Totals</h4>
-              <hr />
-              <div class="row">
-                <div class="col-md-6">
-                  <span class="form-label">Total</span>
+              <div class="container-fluid checkout-box">
+                <h2 class="banner-title">Your order</h2>
+                <br />
+                <div class="row">
+                  <div class="col-md-6 col-6">
+                    <span class="form-label">product</span>
+                  </div>
+                  <div class="col-md-6 col-6 align-right">
+                    <span class="form-label">total</span>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <span class="total-cart">$50.00</span>
+                <hr />
+                <div class="row">
+                  <div class="col-md-6 col-6">
+                    CRA Themes Tour Package <strong>x 4</strong>
+                  </div>
+                  <div class="col-md-6 col-6 align-right">
+                    $200.00
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-md-6 col-6 subtotal-and-total">
+                    Subtotal
+                  </div>
+                  <div class="col-md-6 col-6 subtotal-and-total align-right">
+                    $200.00
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-md-6 col-6 subtotal-and-total">
+                    Total
+                  </div>
+                  <div class="col-md-6 col-6 subtotal-and-total align-right">
+                    $200.00
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-md-4 credit-card" style="position: relative;">
+                    <input type="radio" name="payment" style="position: relative; bottom: 15px;" >
+                    <i class="fab fa-cc-visa fa-3x credit-card-option"></i>
+
+
+                  </div>
+                  <div class="col-md-4 credit-card">
+                    <input type="radio" name="payment" />
+                    <i class="fab fa-cc-mastercard fa-3x credit-card-option"></i>
+
+                  </div>
+                  <div class="col-md-4 credit-card">
+                    <input type="radio" name="payment" />
+                    <i class="fab fa-cc-paypal fa-3x credit-card-option"></i>
+                  </div>
+                </div>
+                <div class="row" id="checkout-cc-detail">
+
+                </div>
+                <div class="row input-row">
+                  <div class="col-md-2">
+
+                  </div>
+                  <div class="col-md-8">
+                    <a href="#" class="btn btn-sm animated-button victoria-four">Place Order</a>
+                  </div>
+                  <div class="col-md-2">
+
+                  </div>
                 </div>
               </div>
-              <hr />
-              <div class="row">
-                <div class="col-md-6">
-
-                </div>
-                <div class="col-md-6">
-                  <a href="checkout.html" class="btn btn-sm animated-button victoria-four">Proceed to Checkout</a>
-                </div>
-              </div>
             </div>
-
           </div>
+        </div>
+
+
         </div>
       </div>
     </div>
@@ -156,9 +233,9 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3">
-            <h1>Logo</h1>
+            <img class="footer-logo" src="./images/logo.png" />
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-12">
             <ul>
               <li class="footer-header">
                 Company
@@ -177,7 +254,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-12">
             <ul>
               <li class="footer-header">
                 Food Tours
@@ -191,10 +268,13 @@
               <li>
                 Corporate Events
               </li>
+              <li>
+                Refer a Friend
+              </li>
 
             </ul>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-12">
             <ul>
               <li class="footer-header">
                 Find Us
@@ -235,6 +315,12 @@
           </div>
 
 
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <center>
+              <i class="footer-social-media-icon fab fa-facebook "></i><a href="https://www.instagram.com/wokthefork/" target="_blank"><i class="footer-social-media-icon fab fa-instagram"></i></a><i class="footer-social-media-icon fab fa-twitter"></i>
+            </center>
 
           </div>
         </div>

@@ -8,22 +8,30 @@
   padding-left: 20px;
   padding-right: 20px;
   background: none;
-  overflow: hidden;
+  /* overflow: hidden; */
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   /* top: -100px; */
   padding-bottom: 6px;
   font-family: "Montserrat", sans-serif;
-  background-color: rgba(0,0,0, 0.93);
-  opacity: .7;
+  /* background-color: rgba(0,0,0, 0.3); */
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0));
+  /* opacity: .3; */
 }
 
 @media only screen and (max-width: 1000px) {
+
   .main_h {
-    background-color: rgba(255,255,255, 0.93);
+    overflow: hidden;
+    /* background-color: rgba(255,255,255, 0.93); */
     opacity: 1;
     padding-top: 25px;
   }
+  .main_h.open-nav{
+    background-image: none;
+    background-color: rgba(255,255,255, 0.93);
+  }
+
 }
 
 .open-nav {
@@ -35,17 +43,18 @@
 }
 
 .sticky {
+  background-image: none;
   background-color: rgba(255, 255, 255, 0.93);
   opacity: 1;
   top: 0px;
-  border-bottom: 1px solid gainsboro;
+  /* border-bottom: 1px solid gainsboro; */
   color: #888;
 }
 
 .logo {
-  font-size: 25px;
-  color: #8f8f8f;
-  text-transform: uppercase;
+  /* font-size: 25px; */
+  /* color: #8f8f8f; */
+  /* text-transform: uppercase; */
   float: left;
   display: block;
   margin-top: 0;
@@ -55,17 +64,21 @@
   background-size: contain;
   text-indent: -9999px;
   background-repeat: no-repeat;
+  position: relative;
+  height: 75px;
 
 }
 @media only screen and (max-width: 1000px) {
   .logo {
     float: none;
+    height: 35px;
+    /* z-index: 200; */
   }
 }
 
 nav {
   float: right;
-  width: 85%;
+  width: 80%;
 }
 @media only screen and (max-width: 1000px) {
   nav {
@@ -99,6 +112,15 @@ nav ul li {
   font-size: 12px;
   font-weight: 600;
 }
+
+
+.sticky .nav-link:hover {
+  color: #D24D57;
+}
+.nav-link:hover {
+  color: #ffcc00;
+
+}
 .dark-text{
   color: #888;
 }
@@ -128,16 +150,22 @@ nav ul li {
   .mobile-toggle {
     display: block;
   }
+
 }
 .mobile-toggle span {
   width: 30px;
   height: 4px;
   margin-bottom: 6px;
   border-radius: 1000px;
-  background: #8f8f8f;
+  background: #fff;
   display: block;
 }
-
+.open-nav .mobile-toggle span {
+  background: #8f8f8f;
+}
+.sticky .mobile-toggle span {
+  background: #8f8f8f;
+}
 .header-row {
   width: 100%;
   max-width: 1500px;
