@@ -13,9 +13,9 @@
 .banner{
   padding: 30px 0px;
 }
-.banner:nth-child(even){
+/* .banner:nth-child(even){
   background-color: #eeeeee;
-}
+} */
 .banner-title{
   text-align: center;
   margin: 50px auto;
