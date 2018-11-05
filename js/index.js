@@ -2,14 +2,14 @@ var selection = 'All';
 document.getElementById(selection).style.borderBottom = "2px solid black";
 var tourPackage = [
   {
-    name: 'Little Nonya Tour',
+    name: 'Trump-Kim',
     category: 'Theme',
-    imgUrl: './images/little-nyonya.jpg'
+    imgUrl: './images/trump-kim.jpg'
   },
   {
-    name: 'Rojak Tour',
+    name: 'Instagrammable',
     category: 'Theme',
-    imgUrl: './images/rojak-tour.jpg'
+    imgUrl: './images/instagrammable-2.jpg'
   },
   {
     name: 'Food in CRA',
