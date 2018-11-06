@@ -29,7 +29,7 @@ var tourPackage = [
   {
     name: 'Malay',
     category: 'Cuisine',
-    imgUrl: './images/malay-food.jpg'
+    imgUrl: './images/peranakan-2.jpg'
   },
 
 ]

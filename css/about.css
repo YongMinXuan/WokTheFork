@@ -2,8 +2,8 @@
 
 /*banner*/
 #header-contact{
-  height: 520px;
-  background-image: url("../images/pear/satay-about-local.jpg");
+  height: 590px;
+  background-image: url("../images/pear/about-us-team.jpeg");
   background-attachment: fixed;
   padding-bottom: 20px;
   background-color: rgba(0,0,0,0.6);
@@ -16,23 +16,28 @@
   margin-top: -80px;
 
 }
-#header-contact h1{
-  color: white;
-  text-align: center;
-  padding-top: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
 
 
 /*counter*/
 
-.wrapper {
+
+.wrapper-counter {
 	margin: 30px auto;
 	position: relative;
-	padding: 0 130px;
+	padding: 80px  130px;
+  background-color: grey;
+  margin-right: -15px;
+  margin-left: -15px;
+  background-image: url("../images/pear/hawker-background-counter.jpg");
+  background-color: rgba(0,0,0,0.7);
+  background-blend-mode: overlay;
+}
+
+.wrapper-counter img{
+  margin: auto;
+  display: flex;
+      width: 120px;
+    height: 120px;
 }
 .counter {
 	background-color: #ffffff;
@@ -45,6 +50,7 @@
 	margin-top: 10px;
 	margin-bottom: 0;
 	text-align: center;
+  color: white;
 }
 .count-text {
 	font-size: 15px;
@@ -52,6 +58,7 @@
 	margin-top: 10px;
 	margin-bottom: 0;
 	text-align: center;
+  color: white;
 }
 .fa-2x {
 	margin: 0 auto;
@@ -62,20 +69,21 @@
 
 .wrapper h1{
 	text-align: center;
-	padding: 20px 0 40px 0;
+
 }
 
 
 /*whyus*/
-
+.wrapper{
+  margin: 30px auto;
+  position: relative;
+  padding: 0 60px;
+}
 
 #cards{
   height: auto;
   padding: 10px
   width: 100%;
-  padding-top: 100px;
-  padding-right: 100px;
-  padding-left: 100px;
 
 }
 
@@ -84,21 +92,7 @@
 	max-width: 100%;
 
 }
-#cards h2{
-  text-align: center;
-  font-size: 26px;
-  padding: 10px 10px 0 10px;
-  font-family: raleway;
-  font-weight: 500;
-}
 
-#cards p{
-  text-align: center;
-  padding: 20px 50px;
-   font-size: 15px;
-   font-family: roboto;
-   font-weight: 300;
-}
 
 
 /*Our Team*/

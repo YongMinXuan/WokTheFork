@@ -32,6 +32,7 @@
       <link rel="stylesheet" type="text/css" href="./css/button.css" />
     <link rel="stylesheet" type="text/css" href="./css/about.css" />
     <link rel="stylesheet" type="text/css" href="./css/headers.css" />
+    <link rel="stylesheet" type="text/css" href="./css/team.css" />
   </head>
   <body>
     <!-- nav -->
@@ -72,110 +73,104 @@
 
       <!-- banner -->
       <div class="row" id="header-contact">
-        <h1 class="banner-title">About Us</h1>
-        <div class="cta-btn">
-          <a href="events.html" class="btn btn-sm animated-button victoria-four cta-btn-1">Group Bookings</a>
-          <a href="#" class="btn btn-sm animated-button victoria-four cta-btn-2">Corporate Events</a>
-        </div>
+        <h1 class="banner-header">Exploding</h1>
       </div>
 
+  <!-- cards -->
+  <div class="wrapper">
+      <h1 class="banner-title">Why Us</h1>
+      <div class="row" id="cards">
+        <div class="col-md-4">
+          <img class="mx-auto" src="images/pear/small-groups-eating.jpg">
+          <h2 class="tour-basic-name">Small Groups</h2>
+          <p class="tour-basic-description">Every tour is no bigger than 12 pax. Our friendly guides want to get to know you too. We will cater to your every need.</p>
+        </div>
+
+        <div class="col-md-4">
+          <img class="mx-auto" src="images/pear/hawker-food-variety.png">
+          <h2 class="tour-basic-name">Value for Money</h2>
+          <p class="tour-basic-description">Experience atleast 15 varieties of dishes for any tour selected.
+          We guarantee quality and variety at the lowest price. </p>
+        </div>
+
+        <div class="col-md-4">
+          <img class="mx-auto" src="images/pear/happy-local-eating.jpg">
+          <h2 class="tour-basic-name">Eat the way Locals do</h2>
+          <p class="tour-basic-description">No one explains it better than the locals. Our local guides will satiate your hunger for cultural tidbits.</p>
+        </div>
+      </div>
+</div>
+
       <!-- counter -->
-      <div class="wrapper">
-        <h1 class="banner-title">Why Us</h1>
+      <div id="counter" class="wrapper-counter">
         <div class="row ">
           <div class="col-md-3">
-            <i class="fa fa-code fa-2x"></i>
+            <img src="images/pear/tours.svg">
             <h2 class="timer count-title count-number" data-to="300" data-speed="1500"></h2>
             <p class="count-text ">Tours Conducted</p>
           </div>
 
           <div class="col-md-3">
-            <i class="fa fa-coffee fa-2x"></i>
-            <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
-            <p class="count-text ">Plates of Chicken Rice</p>
+            <img src="images/pear/distance.svg">
+            <h2 class="timer count-title count-number" data-to="50700" data-speed="1500"></h2>
+            <p class="count-text ">KM Travelled</p>
           </div>
 
            <div class="col-md-3">
-            <i class="fa fa-bug fa-2x"></i>
+            <img src="images/pear/hashtag.svg">
             <h2 class="timer count-title count-number" data-to="1100" data-speed="1500"></h2>
-            <p class="count-text ">Kopi</p>
+            <p class="count-text ">Hashtags on Instagram</p>
           </div>
 
           <div class="col-md-3">
-            <i class="fa fa-bug fa-2x"></i>
+            <img src="images/pear/nationalities.svg">
             <h2 class="timer count-title count-number" data-to="57" data-speed="1500"></h2>
             <p class="count-text ">Nationalities Participated</p>
           </div>
         </div>
       </div>
 
-      <!-- cards -->
-      <div class="row" id="cards">
-        <div class="col-md-4">
-          <img class="mx-auto" src="images/pear/small-tour.jpg">
-          <h2>Small Groups</h2>
-          <p>Every tour is no bigger than 12 pax. Our friendly guides want to get to know you too.</p>
-        </div>
-
-        <div class="col-md-4">
-          <img class="mx-auto" src="images/pear/small-tour.jpg">
-          <h2>Skip Planning</h2>
-          <p>Leave the trouble of planning to us! Carefully selected locations are crafted specially for each tour. </p>
-        </div>
-
-        <div class="col-md-4">
-          <img class="mx-auto" src="images/pear/local-eating-food.jpg">
-          <h2>Eat the way Locals do</h2>
-          <p>No one explains it better than the locals. Our local guides will satiate your hunger for cultural tidbits.</p>
+      <!-- team -->
+    <div :class="['container-team', isSelected ? 'container-selected':'', isReady ? 'container-ready':'']" id="app">
+  <div class="team-container">
+    <div class="header">
+      <h1 class="banner-title">Our Team</h1>
+    </div>
+    <div class="person-list">
+      <div class="person" v-for="(person,index) in persons" @click="selectPerson(index,$event)"><img class="person-img" :src="person.photo">
+        <div class="person-details">
+          <h2 class="person-title">{{person.name}}</h2>
+          <p class="person-desc">{{person.title}}</p>
         </div>
       </div>
-
-
-
-      <!--Our team-->
-      <div class="paddinga">
-        <h1 class="banner-title">Our Team</h1>
-        <hr class="line">
-
-        <div class="row">
-          <div class="col-sm-3" >
-            <img src="images/pear/cust1.png"  alt="Cinque Terre" class="hvr-bounce-in members">
-            <div id="who">Dhea Ma, 28</div>
-
-            <div id="whoinfo" >
-              I had Mark helping me to source, proposed (based on my requirement) and given excellent pointers when I did a New Loan package this month. Very professional, efficient, quick and helpful advice for last 1 month.
+    </div>
+  </div>
+  <div class="team-detail">
+    <div class="team-detail-inner" v-if="isOk">
+      <div class="team-detail-left" :style=`background-image:url(${selectedPersonData.photo})`>
+        <div class="team-detail-photo"><img :src="selectedPersonData.photo" alt="">
+        </div>
+      </div>
+      <div class="team-detail-right">
+        <div class="team-detail-bio">
+          <div class="team-detail-header">
+            <h2 class="person-title">{{selectedPersonData.name}}</h2>
+            <p class="person-desc">{{selectedPersonData.title}}</p>
+            <div class="social">
+              <a :href="selectedPersonData.social.facebook" target="_blank" class="ion-social-facebook"></a>
+              <a :href="selectedPersonData.social.twitter" target="_blank" class="ion-social-twitter"></a>
+              <a href="selectedPersonData.social.linkedin" target="_blank" class="ion-social-linkedin"></a>
             </div>
           </div>
-          <div class="col-sm-3" >
-            <img src="images/pear/cust2.png" class="hvr-bounce-in members" alt="Cinque Terre">
-            <div id="who"> Yong Min Xuan, 40</div>
-
-            <div id="whoinfo">
-              Was scouting around the market for competitive rates for my home loan refinancing and was referred to Eugene Huang from SG Mortgage. I have to say things went on smoothly & expeditiously from start to finish.
-            </div>
-          </div>
-          <div class="col-sm-3" >
-            <img src="images/pear/cust3.png" class="hvr-bounce-in members" alt="Cinque Terre">
-
-            <div id="who" >NeeYen, 35</div>
-
-            <div id="whoinfo" >
-              I chanced upon SG Mortgage in my search for suitable loan for the purchase of my property. It’s the single most important purchase so far for me and I needed the best advisors possible.
-            </div>
-          </div>
-          <div class="col-sm-3" >
-            <img src="images/pear/cust3.png" class="hvr-bounce-in members" alt="Cinque Terre">
-
-            <div id="who" >Pearlyn, 24</div>
-
-            <div id="whoinfo" >
-              I chanced upon SG Mortgage in my search for suitable loan for the purchase of my property. It’s the single most important purchase so far for me and I needed the best advisors possible.
-            </div>
+          <div class="team-detail-bio-content" v-html="selectedPersonData.bio">
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
+</div>
     <!-- footer -->
     <footer class="footer">
       <div class="container">
@@ -281,10 +276,13 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-     <script src="./js/menu.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/jquery.inview.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/disclaimer.js"></script>
+    <script src="./js/team.js"></script>
 
 
 
