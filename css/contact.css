@@ -21,6 +21,7 @@ body{
 }
 #header-contact h1{
   margin-top: -180px;
+  
 }
 
 #big-banner p{
@@ -149,6 +150,10 @@ a.animated-button.victoria-four:hover:after {
 
 
 /*info-details*/
+.icon{
+   padding-right: 50px;
+   }
+
 #info-details{
    padding-right: 50px;
     padding-left: 135px;
@@ -160,7 +165,8 @@ a.animated-button.victoria-four:hover:after {
 }
 
 #info-details img{
-   padding-right: 50px;
+  width: 30px;
+  height: 30px;
     padding-left: 0px;
 }
 
