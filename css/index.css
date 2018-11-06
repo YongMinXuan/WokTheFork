@@ -209,6 +209,35 @@ select {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.food-king-review{
+  padding-left: 40px;
+  padding-top: 20px;
+}
+.food-king-review h3{
+  font-weight: 600;
+}
+.flash-sales{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flash-sales a{
+  width: 80%;
+}
+.old-price{
+  text-decoration: line-through;
+  color: #ccc;
+  margin: 0px 10px;
+}
+.new-price{
+  font-size: 20px;
+  font-weight: 600;
+}
+hr{
+
+  width: 100%;
+}
 @media only screen and (max-width: 1000px){
   .date-picker, .dropdown-menu{
     width: 100%;
