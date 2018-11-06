@@ -31,6 +31,7 @@ a .block:hover {
   transition: transform 1s;
   position: relative;
   top: 0;
+  padding-top: 20px;
 
 
   /* padding-bottom: 40px; */
@@ -45,8 +46,11 @@ a .block:hover {
 }
 
 .block img {
-  width: 100%;
+  width: 90%;
   display: block;
+  height: auto;
+  margin: 20px auto;
+  margin-top:10px
 }
 .block .content {
   display: block;
@@ -77,7 +81,9 @@ a .block:hover {
 }
 
 .paragraph{
-  padding-left: 3px;
+  padding-left: 10px;
+  font-size: 14px;
+  padding-right: 10px;
 }
 
 #blog_title{
@@ -88,7 +94,9 @@ a .block:hover {
 .content_title{
   padding-top: 10px;
   padding-bottom: 5px;
-  padding-left: 2.5px
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
 }
 
 .carrot_cake{
@@ -118,3 +126,14 @@ a .block:hover {
   background-size: cover;
   min-height: 450px;
 }
+
+.read-more{
+  color:#D24D57;
+  padding-left: 10px;
+}
+
+.banner_images{
+  height:500px;
+  width:100%;
+}
+
