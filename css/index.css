@@ -231,8 +231,16 @@ select {
   margin: 0px 10px;
 }
 .new-price{
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
+  color: #d24d57;
+}
+#countdown{
+  background-color: #ffcc00;
+  color: red;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 10px;
 }
 hr{
 
