@@ -1,100 +1,117 @@
-// timeline
-(function ($) {
-	$.fn.countTo = function (options) {
-		options = options || {};
-		
-		return $(this).each(function () {
-			// set options for current element
-			var settings = $.extend({}, $.fn.countTo.defaults, {
-				from:            $(this).data('from'),
-				to:              $(this).data('to'),
-				speed:           $(this).data('speed'),
-				refreshInterval: $(this).data('refresh-interval'),
-				decimals:        $(this).data('decimals')
-			}, options);
+// counter
+
+$('#counter').on('inview', function(event, isInView) {
+  if (isInView) {
+    // element is now visible in the viewport
+    (function ($) {
+		$.fn.countTo = function (options) {
+			options = options || {};
 			
-			// how many times to update the value, and how much to increment the value on each update
-			var loops = Math.ceil(settings.speed / settings.refreshInterval),
-				increment = (settings.to - settings.from) / loops;
-			
-			// references & variables that will change with each update
-			var self = this,
-				$self = $(this),
-				loopCount = 0,
-				value = settings.from,
-				data = $self.data('countTo') || {};
-			
-			$self.data('countTo', data);
-			
-			// if an existing interval can be found, clear it first
-			if (data.interval) {
-				clearInterval(data.interval);
-			}
-			data.interval = setInterval(updateTimer, settings.refreshInterval);
-			
-			// initialize the element with the starting value
-			render(value);
-			
-			function updateTimer() {
-				value += increment;
-				loopCount++;
+			return $(this).each(function () {
+				// set options for current element
+				var settings = $.extend({}, $.fn.countTo.defaults, {
+					from:            $(this).data('from'),
+					to:              $(this).data('to'),
+					speed:           $(this).data('speed'),
+					refreshInterval: $(this).data('refresh-interval'),
+					decimals:        $(this).data('decimals')
+				}, options);
 				
+				// how many times to update the value, and how much to increment the value on each update
+				var loops = Math.ceil(settings.speed / settings.refreshInterval),
+					increment = (settings.to - settings.from) / loops;
+				
+				// references & variables that will change with each update
+				var self = this,
+					$self = $(this),
+					loopCount = 0,
+					value = settings.from,
+					data = $self.data('countTo') || {};
+				
+				$self.data('countTo', data);
+				
+				// if an existing interval can be found, clear it first
+				if (data.interval) {
+					clearInterval(data.interval);
+				}
+				data.interval = setInterval(updateTimer, settings.refreshInterval);
+				
+				// initialize the element with the starting value
 				render(value);
 				
-				if (typeof(settings.onUpdate) == 'function') {
-					settings.onUpdate.call(self, value);
-				}
-				
-				if (loopCount >= loops) {
-					// remove the interval
-					$self.removeData('countTo');
-					clearInterval(data.interval);
-					value = settings.to;
+				function updateTimer() {
+					value += increment;
+					loopCount++;
 					
-					if (typeof(settings.onComplete) == 'function') {
-						settings.onComplete.call(self, value);
+					render(value);
+					
+					if (typeof(settings.onUpdate) == 'function') {
+						settings.onUpdate.call(self, value);
+					}
+					
+					if (loopCount >= loops) {
+						// remove the interval
+						$self.removeData('countTo');
+						clearInterval(data.interval);
+						value = settings.to;
+						
+						if (typeof(settings.onComplete) == 'function') {
+							settings.onComplete.call(self, value);
+						}
 					}
 				}
-			}
-			
-			function render(value) {
-				var formattedValue = settings.formatter.call(self, value, settings);
-				$self.html(formattedValue);
-			}
-		});
-	};
-	
-	$.fn.countTo.defaults = {
-		from: 0,               // the number the element should start at
-		to: 0,                 // the number the element should end at
-		speed: 1000,           // how long it should take to count between the target numbers
-		refreshInterval: 100,  // how often the element should be updated
-		decimals: 0,           // the number of decimal places to show
-		formatter: formatter,  // handler for formatting the value before rendering
-		onUpdate: null,        // callback method for every time the element is updated
-		onComplete: null       // callback method for when the element finishes updating
-	};
-	
-	function formatter(value, settings) {
-		return value.toFixed(settings.decimals);
-	}
-}(jQuery));
+				
+				function render(value) {
+					var formattedValue = settings.formatter.call(self, value, settings);
+					$self.html(formattedValue);
+				}
+			});
+		};
+		
+		$.fn.countTo.defaults = {
+			from: 0,               // the number the element should start at
+			to: 0,                 // the number the element should end at
+			speed: 1000,           // how long it should take to count between the target numbers
+			refreshInterval: 100,  // how often the element should be updated
+			decimals: 0,           // the number of decimal places to show
+			formatter: formatter,  // handler for formatting the value before rendering
+			onUpdate: null,        // callback method for every time the element is updated
+			onComplete: null       // callback method for when the element finishes updating
+		};
+		
+		function formatter(value, settings) {
+			return value.toFixed(settings.decimals);
+		}
+	}(jQuery));
 
-jQuery(function ($) {
-  // custom formatting example
-  $('.count-number').data('countToOptions', {
-	formatter: function (value, options) {
-	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-	}
-  });
-  
-  // start all the timers
-  $('.timer').each(count);  
-  
-  function count(options) {
-	var $this = $(this);
-	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-	$this.countTo(options);
+	jQuery(function ($) {
+	  // custom formatting example
+	  $('.count-number').data('countToOptions', {
+		formatter: function (value, options) {
+		  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+		}
+	  });
+	  
+	  // start all the timers
+	//   var waypoint = new Waypoint({
+	//   element: document.getElementById('counter'),
+	//   handler: function() {
+	//     notify('Basic waypoint triggered');
+	//   }
+	// })
+
+
+	  $('.timer').each(count);  
+	  
+	  function count(options) {
+		var $this = $(this);
+		options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+		$this.countTo(options);
+	  }
+	});
+
+  } else {
+    // element has gone out of viewport
   }
 });
 
@@ -198,7 +215,7 @@ $(".submit-btn").click(function() {
   if (v.form()) {
     $("#loader").show();
      setTimeout(function(){
-       $("#booking-form").html("<h4>Your message was sent successfully. Thanks! We'll be in touch as soon as we can, which is usually like lightning (Unless we have a fork in our hands!).</h4>");
+       $("#booking-form").html("<h4>Your message was sent successfully. Thanks! We'll be in touch as soon as we can, which is usually like lightning (Unless we have a fork in our hands!)</h4>");
      }, 1000);
     return false;
   }

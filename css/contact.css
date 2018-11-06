@@ -8,7 +8,7 @@ body{
 
 }
 #header-contact{
-  height: 400px;
+  height: 510px;
   background-image:  url("https://image.ibb.co/mJ9tLa/image.png");
   padding-bottom: 20px;
   background-color: rgba(32, 33, 33, 0.8);
@@ -20,14 +20,7 @@ body{
   padding-top: 100px;
 }
 #header-contact h1{
-  color: white;
-  font-size: 40px;
-  text-align: center;
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  margin-top: -180px;
 }
 
 #big-banner p{
@@ -44,7 +37,7 @@ body{
 
 .cta-btn{
   margin: auto;
-  margin-top: -30px;
+  margin-top: -80px;
 
 
 }
@@ -122,7 +115,6 @@ a.animated-button:link, a.animated-button:visited {
   text-transform: uppercase;
   overflow: hidden;
   letter-spacing: .08em;
-      margin-right: 20px;
     margin-left: 20px;
   /* text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2); */
   -webkit-transition: all 1s ease;
@@ -159,7 +151,7 @@ a.animated-button.victoria-four:hover:after {
 /*info-details*/
 #info-details{
    padding-right: 50px;
-    padding-left: 80px;
+    padding-left: 135px;
 }
 
 #info-details h2{
@@ -184,7 +176,12 @@ a.animated-button.victoria-four:hover:after {
 
 #contact-form{
      padding-left: 80px;
-    padding-right: 50px;
+    padding-right: 100px;
+    padding-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 22px;
 }
 /* Input Styles */
 
@@ -243,8 +240,14 @@ a.animated-button.victoria-four:hover:after {
 
 .form-control{
   border:  2px solid rgba(255,204,0,0.3);
+  color: grey;
 }
 
+
+/*map*/
+.wrapper-map{
+  margin-bottom: -10px;
+}
 
 @media only screen and (max-width: 600px){
   #info-details {

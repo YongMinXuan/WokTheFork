@@ -9,7 +9,7 @@ body{
 
 }
 #header-contact{
-  height: 520px;
+  height: 570px;
    background-image: url("../images/pear/team-bonding-food.jpg");
    background-attachment: fixed;
   padding-bottom: 20px;
@@ -20,17 +20,10 @@ body{
   text-align: center;
       margin-left: -15px;
     margin-right: -15px;
-    margin-top: -80px;
-  
+
 }
 #header-contact h1{
-  color: white;
-  text-align: center;
-  padding-top: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  margin-top: -60px;
 }
 
 #big-banner p{
@@ -406,32 +399,29 @@ h1 {
       color: $white;
     }
   }
-  .button {
-    display: block;
-    width: 100px;
-    margin: 2em auto 1em;
-    text-align: center;
-    font-size: 12px;
-    color: $white;
-    line-height: 1;
-    position: relative;
-    font-weight: 700;
-    &::after {
-      content: '\2192';
-      opacity: 0;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translate(0, -50%);
-      transition: all 0.3s;
-    }
-    &:hover {
-      &::after {
-        transform: translate(5px, -50%);
-        opacity: 1;
-      }
-    }
-  }
+.button {
+  display: block;
+  width: 100px;
+  margin: 2em auto 1em;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1;
+  position: relative;
+  font-weight: 700;
+}
+.button::after {
+  content: "→";
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
+}
+.button:hover::after {
+  transform: translate(5px, -50%);
+  opacity: 1;
+}
 }
 
 /*biz-form*/
@@ -459,21 +449,18 @@ h1 {
 #booking-form input, 
 #booking-form textarea,  
 #booking-form select {
-    font-size: 18px;
+       font-size: 16px;
     padding: 0 28px;
     width: 100%;
     box-sizing: border-box;
     border: 1px solid rgb(233,233,233);
     text-align: left;
     border-radius: 35px;
-    color: #000000;
-    
+    color: grey;
     letter-spacing: normal;
     height: 50px;
-    line-height: 50px;
-    font-family: 'Merriweather', serif;
     background: #fff;
-  margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 #booking-form select {
     background: url('https://seashineadventures.com/wp-content/uploads/2017/08/grey-chevron.png') no-repeat;
@@ -495,10 +482,12 @@ h1 {
     border: 1px solid rgb(211,211,211);
 }
 #booking-form label {
-    font-size: 18px;
-    font-weight: 300;
-  display: block;
+     font-size: 20px;
+    /* font-weight: 300; */
+    display: block;
     margin-bottom: 10px;
+    font-family: roboto;
+    padding-bottom: 10px;
 }
 
 /* Buttons */
@@ -534,6 +523,7 @@ h1 {
 .progress-wrap {
     margin: auto;
     display: table;
+    padding: 20px;
 }
 .line-progress-bar {
     display: flex;
@@ -766,4 +756,8 @@ span.error {
 }
 .date-picker.open .input button {
   background: #68768A;
+}
+
+#booking-form h4{
+  text-align: center;
 }
