@@ -1,2 +1,0 @@
-# WokTheFork
-CS2024
