@@ -115,7 +115,14 @@ nav ul li {
   font-weight: 600;
 }
 
-
+#cart-button{
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.sticky #cart-button{
+  border: 1px solid #888;
+}
 .sticky .nav-link:hover {
   color: #D24D57;
 }
