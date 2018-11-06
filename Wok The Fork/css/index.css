@@ -1,0 +1,214 @@
+
+
+.banner{
+  padding: 30px 0px;
+}
+.banner:nth-child(odd){
+  background-color: #eeeeee;
+}
+#big-banner{
+  /* max-width: 100vw; */
+  /*max-height: 70vh; */
+  background-color: #ccc;
+  overflow: hidden;
+  padding: 0px 0px;
+
+}
+.videoWrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.videoWrapper video {
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.videoWrapper .overlay{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  opacity: 0.5;
+}
+.carousel-item{
+  /* max-height: 512px; */
+  overflow: hidden;
+}
+.carousel-item > img {
+  height: 100%;
+  vertical-align: bottom;
+}
+.carousel-caption{
+  background-color: rgba(0,0,0,0.6);
+}
+.banner-title{
+  text-align: center;
+  margin: 50px auto;
+  font-weight: bold;
+}
+.banner-description{
+  width: 100%;
+  text-align:center;
+}
+.browse-card-image{
+  width: 100%;
+}
+.browse-card{
+  margin: 20px 0px;
+}
+#browse-card-filter{
+  margin: auto;
+}
+.filter-button{
+  padding: 10px 20px;
+  background-color: white;
+  color: #707070;
+  background-image: none;
+  border: none;
+}
+.filter-button:focus{
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.filter-button:hover{
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.review-card {
+  height: 200px;
+  width: 500px;
+  background-color: #fff;
+  margin: 20px 30px;
+  display: inline-block;
+}
+#review-container{
+  padding: 50px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+.review-button{
+  width: 50px;
+  height: 50px;
+  background-image: none;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+}
+
+.review-button:focus {
+  background-color: #000;
+  color: white;
+  outline: none;
+}
+.profile-picture{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50px;
+  position: relative;
+  top: -50px;
+  left: 30px;
+}
+.review-content{
+  white-space: normal;
+  padding: 0px 20px;
+  margin-top: -20px;
+  font-size: 15px;
+}
+.reviewer-name{
+  font-weight: 600;
+  padding: 0px 20px;
+}
+.reviewer-title{
+  font-size: 14px;
+  color: #aaa;
+  padding: 0px 20px;
+}
+.btn, .form-control{
+  padding: 14px 15px;
+  border-radius: 0px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.date-picker{
+  border: 1px solid #ccc;
+
+}
+#trip-advisor-image{
+  height: 120px;
+}
+.vertical-center{
+  display: flex;
+  align-items: center;
+}
+.tour-basic{
+  max-height: 150px;
+  margin: auto auto;
+  display: block;
+  /* border: 1px solid black; */
+}
+.tour-basic-description {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+#subscribe{
+  /* background-image: url('../images/prawn-mee.jpg'); */
+  max-height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 768px){
+  .date-picker, .dropdown-menu{
+    width: 100%;
+  }
+  #trip-advisor-image{
+    height: 100px;
+    margin: auto auto;
+  }
+  .banner-description{
+    padding: 10px;
+  }
+  #myVideo{
+    max-height: 200px;
+  }
+  #review-container{
+    padding: 10px;
+    overflow: visible;
+    height: 100%;
+    /* margin: 20px 0px; */
+    white-space: normal;
+  }
+  /* #review-container{
+    white-space: nowrap;
+    position: relative;
+  } */
+  .review-card{
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    display: block;
+    margin: 80px 30px;
+  }
+  /* .review-card {
+    height: 200px;
+    width: 500px;
+    background-color: #fff;
+    margin: 20px 30px;
+    display: inline-block;
+  } */
+  .review-button{
+    display: none;
+  }
+
+}
