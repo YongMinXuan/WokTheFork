@@ -105,14 +105,26 @@
           <hr />
           <div class="row">
             <div class="col-md-6 col-3  cart-row">
-              CRA Themes Tour Package
+              <div>
+                CRA Themes Tour Package
+                <p class="tour-detail">
+                  Date: Wednesday, 14 November 2018
+                  <br />
+                  Time: 0900 - 1500
+                  <br />
+                  Pick up point: Marina Bay Sands
+                </p>
+              </div>
+
+
+
             </div>
             <div class="col-md-2 col-2 cart-row">
-              $50.00
+              $<span id="tour-price">50.00</span>
             </div>
             <div class="col-md-1 col-3 cart-row">
               <div class="input-group mb-3">
-                <input type="number" class="form-control"  aria-describedby="basic-addon1"value="1">
+                <input type="number" class="form-control"  aria-describedby="basic-addon1"value="1" id="pax-input" onchange="updateTotal()">
               </div>
             </div>
             <div class="col-md-2 col-3 cart-row">
@@ -126,11 +138,11 @@
           <div class="row">
             <div class="col-md-3 col-12 mobile-spacing">
               <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Coupon Code" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Coupon Code" aria-describedby="basic-addon1" id="coupon-code">
               </div>
             </div>
             <div class="col-md-2 col-12 mobile-spacing">
-              <a href="#" class="btn btn-sm animated-button victoria-four">Apply Coupon</a>
+              <a href="" class="btn btn-sm animated-button victoria-four" onclick="checkCouponCode(); return false;">Apply Coupon</a>
             </div>
             <div class="col-md-5 col-12 mobile-spacing">
 
@@ -151,7 +163,7 @@
                   <span class="form-label">Total</span>
                 </div>
                 <div class="col-md-6">
-                  <span class="total-cart">$50.00</span>
+                  $<span id="total-cart">50.00</span>
                 </div>
               </div>
               <hr />
@@ -283,6 +295,7 @@
     <script src="./js/menu.js"></script>
     <script src="./js/date.js"></script>
     <script src="./js/disclaimer.js"></script>
+    <script src="./js/cart.js"></script>
     <!-- <script src="./js/index.js"></script> -->
   </body>
 </html>
