@@ -63,13 +63,15 @@ ul,ol {
 	list-style-position: inside;
 }
 
-
+a:hover {
+    color: white;
+}
 
 .packages h1 {
 	margin: 15px auto;
 	width: 500px;
 	height: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .packages {
   width: 90%;
@@ -87,6 +89,7 @@ section {
   position: relative;
 	float:left;
 	height: 100%;
+  padding-top: 10px;
 }
 
 section img {
