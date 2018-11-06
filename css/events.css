@@ -635,9 +635,8 @@ span.error {
   line-height: 50px;
   font-size: 16px;
   padding: 0 10px;
-  color: black;
+  color: grey;
   box-sizing: border-box;
-   font-size: 18px;
     padding: 0 28px;
 }
 .date-picker .input button {
