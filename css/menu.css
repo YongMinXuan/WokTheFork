@@ -57,21 +57,23 @@
   /* text-transform: uppercase; */
   float: left;
   display: block;
-  margin-top: 0;
-  line-height: 1;
+  margin-top: -10px;
+  /* line-height: 1; */
   margin-bottom: 10px;
   background-image: url('../images/logo.png');
   background-size: contain;
   text-indent: -9999px;
   background-repeat: no-repeat;
   position: relative;
-  height: 75px;
+  height: 100px;
 
 }
 @media only screen and (max-width: 1000px) {
   .logo {
     float: none;
     height: 35px;
+    width: 50px;
+    /* margin-top: 0px; */
     /* z-index: 200; */
   }
 }

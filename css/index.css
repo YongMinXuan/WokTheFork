@@ -263,6 +263,10 @@ hr{
   #myVideo{
     max-height: 200px;
   }
+  .videoWrapper{
+    max-height: 200px;
+    margin: -30px 0px;
+  }
   #review-container{
     padding: 10px;
     overflow: visible;
