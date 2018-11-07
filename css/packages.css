@@ -69,9 +69,8 @@ a:hover {
 
 .packages h1 {
 	margin: 15px auto;
-	width: 500px;
-	height: 30px;
-  margin-bottom: 40px;
+    height: auto;
+    margin-bottom: 40px;
 }
 .packages {
   width: 90%;

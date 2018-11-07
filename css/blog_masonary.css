@@ -125,7 +125,7 @@ a .block:hover {
 
 #blog_title{
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .content_title{
@@ -174,3 +174,15 @@ a .block:hover {
   width:100%;
 }
 
+.header-contact{
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: -200px;
+
+}
