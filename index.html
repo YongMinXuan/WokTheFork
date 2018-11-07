@@ -208,7 +208,7 @@
             <div class="col-md-6  col-12 food-king-review">
               <h3>Approved by Food King NOC</h3>
               <p>
-                Wonder what local YouTube stars Night Owl Cinematics and Dee Kosh think about our Food Tour? Here's a hint. It's FoodKing Good!!! Want to have the same awesome explosive experience they had? 
+                Wonder what local YouTube stars Night Owl Cinematics and Dee Kosh think about our Food Tour? Here's a hint. It's FoodKing Good!!! Want to have the same awesome explosive experience they had?
               </p>
               <a href="crazyrichasians.html" class="btn btn-sm animated-button victoria-four" style="width: 290px;">Click here to find out more!!</a>
             </div>
@@ -244,7 +244,7 @@
 
       </div>
 
-      <div class="row banner">
+      <div class="row banner" id="big-banner">
         <div class="videoWrapper">
           <!-- <div class="overlay">
 
@@ -394,17 +394,17 @@
               <li class="footer-header">
                 Company
               </li>
-              <li>
-                About Us
+              <li class="footer-link">
+                <a href="about.html">About Us</a>
               </li>
-              <li>
-                Blog
+              <li class="footer-link">
+                <a href="blog.html">Blog</a>
               </li>
-              <li>
-                FAQ
+              <li class="footer-link">
+                <a href="faq.html">FAQ</a>
               </li>
-              <li>
-                Contact Us
+              <li class="footer-link">
+                <a href="contact.html">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -413,19 +413,15 @@
               <li class="footer-header">
                 Food Tours
               </li>
-              <li>
-                Cuisines
+              <li class="footer-link">
+                <a href="cuisine.html">Cuisines</a>
               </li>
-              <li>
-                Themes
+              <li class="footer-link">
+                <a href="theme.html">Themes</a>
               </li>
-              <li>
-                Corporate Events
+              <li class="footer-link">
+                <a href="events.html">Corporate Events</a>
               </li>
-              <li>
-                Refer a Friend
-              </li>
-
             </ul>
           </div>
           <div class="col-lg-3 col-md-12">
@@ -473,7 +469,7 @@
         <div class="row">
           <div class="col-md-3">
             <center>
-              <i class="footer-social-media-icon fab fa-facebook "></i><a href="https://www.instagram.com/wokthefork/" target="_blank"><i class="footer-social-media-icon fab fa-instagram"></i></a><i class="footer-social-media-icon fab fa-twitter"></i>
+              <a href="https://www.facebook.com/wokthefork" target="_blank"><i class="footer-social-media-icon fab fa-facebook "></i></a><a href="https://www.instagram.com/wokthefork/" target="_blank"><i class="footer-social-media-icon fab fa-instagram"></i></a><i class="footer-social-media-icon fab fa-twitter"></i>
             </center>
 
           </div>
@@ -482,7 +478,24 @@
 
 
     </footer>
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="293996198110642"
+  theme_color="#d24d57"
+  logged_in_greeting="Hi! How can we help you?"
+  logged_out_greeting="Hi! How can we help you?">
+</div>
 
 
 
