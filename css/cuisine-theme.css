@@ -138,12 +138,7 @@
   top: 80%;
 }
 
-<<<<<<< HEAD
-.responsive {
-    max-width: auto;
-    height: auto;
-}
-=======
+
 #big-banner{
   width: 100vw;
 }
@@ -153,4 +148,8 @@
 #myVideo{
   width: 100%;
 }
->>>>>>> neeyen
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
