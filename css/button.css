@@ -3,10 +3,10 @@
 
 
 /* Global Button Styles */
-a.animated-button{
+a.animated-button, button.animated-button{
   z-index: 1;
 }
-a.animated-button:link, a.animated-button:visited {
+a.animated-button:link, a.animated-button:visited , button.animated-button:link, button.animated-button:visited {
 	position: relative;
 	display: block;
 	margin: 30px auto 0;
@@ -26,7 +26,7 @@ a.animated-button:link, a.animated-button:visited {
 	-o-transition: all 1s ease;
 	transition: all 1s ease;
 }
-a.animated-button:link:after, a.animated-button:visited:after {
+a.animated-button:link:after, a.animated-button:visited:after, button.animated-button:link:after, button.animated-button:visited:after {
 	content: "";
 	position: absolute;
 	height: 0%;
@@ -39,14 +39,14 @@ a.animated-button:link:after, a.animated-button:visited:after {
 	-o-transition: all 0.75s ease 0s;
 	transition: all 0.75s ease 0s;
 }
-a.animated-button:link:hover, a.animated-button:visited:hover {
+a.animated-button:link:hover, a.animated-button:visited:hover, button.animated-button:link:hover, button.animated-button:visited:hover {
 	color: #FFF;
 	text-shadow: none;
 }
-a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after , button.animated-button:link:hover:after, button.animated-button:visited:hover:after {
 	height: 450%;
 }
-a.animated-button:link, a.animated-button:visited {
+a.animated-button:link, a.animated-button:visited, button.animated-button:link, button.animated-button:visited {
 	position: relative;
 	display: block;
 	margin: 0px auto 0;
@@ -69,10 +69,10 @@ a.animated-button:link, a.animated-button:visited {
 
 /* Victoria Buttons */
 
-a.animated-button.victoria-four {
+a.animated-button.victoria-four, button.animated-button.victoria-four {
 	border: 2px solid #D24D57;
 }
-a.animated-button.victoria-four:after {
+a.animated-button.victoria-four:after, button.animated-button.victoria-four:after {
 	background: #D24D57;
 	opacity: .5;
 	-moz-transform: translateY(-50%) translateX(-50%) rotate(90deg);
@@ -80,7 +80,7 @@ a.animated-button.victoria-four:after {
 	-webkit-transform: translateY(-50%) translateX(-50%) rotate(90deg);
 	transform: translateY(-50%) translateX(-50%) rotate(90deg);
 }
-a.animated-button.victoria-four:hover:after {
+a.animated-button.victoria-four:hover:after, button.animated-button.victoria-four:hover:after {
 	opacity: 1;
 	height: 600% !important;
 }
