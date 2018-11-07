@@ -82,7 +82,10 @@
 .address-input{
   margin: 10px 0px;
 }
-
+.tour-detail{
+  font-size: 14px;
+  color: #888;
+}
 .checkout-box{
   /* background-color: rgb(251, 251, 251); */
   border: 2px solid #ccc;
