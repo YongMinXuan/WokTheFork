@@ -57,7 +57,7 @@ body{
 .rbd-core-ui{
   height: auto;
   margin-top: -200px;
-
+width: 100%;
 }
 
 .rbd-review-slider .rbd-preloader {
@@ -69,11 +69,13 @@ body{
 .rbd-review-slider .rbd-review.rbd-prev {
   transform: translate3d(-100px,0,-50px);
   display: inline-block;
+
 }
 
 .rbd-review-slider .rbd-review.rbd-next {
   transform: translate3d(100px,0,-50px);
   display: inline-block;
+  margin-right: 0px;
 }
 
 .rbd-review-slider .rbd-review.rbd-curr {
@@ -103,7 +105,7 @@ body{
   opacity: 0;
   margin-top: 180px;
   background: #fff;
-  max-width: 70%;
+  width: 70%;
 }
 
 .rbd-review-slider .rbd-review.rbd-first {
@@ -137,10 +139,7 @@ body{
   box-shadow: 0 3px 12px -2px rgba(0,0,0,.35);
 }
 
-.rbd-footing {
-  margin: 20px 0 0;
-  text-align: center;
-}
+
 
 @keyframes round{   
   25%{
@@ -151,6 +150,25 @@ body{
   }
 } 
 
+@media only screen and (max-width: 1000px){
+
+.rbd-review-slider .rbd-review.rbd-prev {
+  transform: translate3d(-100px,0,-50px);
+  display: none;
+
+}
+
+.rbd-review-slider .rbd-review.rbd-next {
+  transform: translate3d(100px,0,-50px);
+  display:none;
+  margin-right: 0px;
+}
+
+.rbd-review-slider .rbd-review.rbd-curr {
+  transform: translate3d(0,0,0) scale(1);
+  opacity: 1;
+  display: inline-block;}
+}
 /*services*/
 
 // Variables
@@ -501,7 +519,7 @@ h1 {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 1px;
-    min-width: 400px;
+    min-width: 100px;
     display: inline-block;
     text-align: center;
     font-weight: 400;
@@ -524,29 +542,33 @@ h1 {
     margin: auto;
     display: table;
     padding: 20px;
+    min-width: 100px;
 }
 .line-progress-bar {
     display: flex;
     margin: auto;
+    min-width: 100px;
     width: 100%;
 }
 .line {
     height: 1px;
-    width: 250px;
+    width: 100px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: rgb(217, 217, 217);
     position: absolute;
     margin-top: 8px;
+    min-width: 100px;
 }
 .progress-wrap div ul {
     display: flex;
-    width: 250px;
+    width: 100%;
     list-style: none;
     padding: 0px;
     margin: initial;
     justify-content: space-between;
     z-index: 1;
+    min-width: 100px;
 }
 .progressbar-dots {
     display: inline-flex;
