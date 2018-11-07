@@ -137,3 +137,8 @@
 .fadeIn-bottom{
   top: 80%;
 }
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
