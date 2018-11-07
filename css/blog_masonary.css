@@ -174,7 +174,7 @@ a .block:hover {
   width:100%;
 }
 
-#header-contact h4{
+.header-contact{
   color: white;
   text-align: center;
   display: flex;
