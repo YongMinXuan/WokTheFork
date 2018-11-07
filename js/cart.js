@@ -9,23 +9,39 @@ function updateTotal(){
 }
 
 function checkCouponCode(){
+  var couponStatus = document.getElementById('coupon-status').innerHTML;
+  console.log(couponStatus);
   var couponCode = document.getElementById('coupon-code').value;
   var currentPrice = parseFloat(document.getElementById('total-cart').innerHTML);
   if (couponCode == ""){
     return currentPrice;
   }
-  var coupons = {
-    "FAM50": 0.5,
-    "DIWALI18": 0.8
+  if (couponStatus == "Promo code applied!"){
+    return currentPrice;
+  } else {
+    var coupons = {
+      "FAM50": 0.5,
+      "DIWALI18": 0.8
+    }
+
+    var discount = coupons[couponCode];
+    if (discount == undefined){
+      document.getElementById('coupon-status').innerHTML = "Coupon is wrong please enter again";
+      return currentPrice
+    } else {
+      document.getElementById('coupon-status').innerHTML = "Promo code applied!";
+    }
+
+
+    var newPrice = currentPrice * discount;
+    document.getElementById('total-cart').innerHTML = String(newPrice.toFixed(2));
+
+
+    return newPrice;
   }
 
-  var discount = coupons[couponCode];
 
 
 
-  var newPrice = currentPrice * discount;
-  document.getElementById('total-cart').innerHTML = String(newPrice.toFixed(2));
 
-
-  return newPrice;
 }
