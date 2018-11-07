@@ -1,7 +1,7 @@
 /*header*/
 #header-contact{
   height: 590px;
-  background-image: url("../images/pear/banner_blog.jpg");
+  background-image: url("../images/wantonmee.jpg");
   background-attachment: fixed;
   padding-bottom: 20px;
   background-color: rgba(0,0,0,0.6);
@@ -124,7 +124,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    /* height: 500px; */
+    height: 100%;
 }
 
 .name {
@@ -206,9 +206,9 @@ article > blockquote {
 
 .wrapper {
     background: #ffffff;
-    width: 100%;
+    width: 70%;
     min-height: 100%;
-    margin: 0;
+    margin: auto;
     position: relative;
 }
 
