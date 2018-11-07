@@ -42,13 +42,23 @@
 
             <nav>
                 <ul>
-                    <li><a class="nav-link" href="#">Home</a></li>
-                    <li><a class="nav-link" href="#">Cuisines</a></li>
-                    <li><a class="nav-link" href="#">Themes</a></li>
-                    <li><a class="nav-link" href="#">About Us</a></li>
-                    <li><a class="nav-link" href="#">Blog</a></li>
-                    <li><a class="nav-link" href="#">Corporate Events</a></li>
-                    <li><a class="nav-link" href="#">Contact Us</a></li>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="cuisine.html" >
+                      Cuisines
+                    </a>
+                    </li>
+                    <li><a class="nav-link" href="theme.html">Themes</a></li>
+                    <li><a class="nav-link" href="about.html">About Us</a></li>
+                    <li><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li>
+                      <a class="nav-link" href="events.html">Corporate Events</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="cart.html" id="cart-button">Cart</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -57,16 +67,11 @@
     </header>
     <div class="container-fluid">
 
-    <div id="carouselExampleIndicators" class="row carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="./images/cuisine.jpg" alt="First slide">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>CUISINES</h1>
-            </div>
+          <div class="row" id="header-contact-cuisine">
+            <h1 class="banner-header">Cuisines</h1>
           </div>
-        </div>
-      </div>
+
+
 
             <div class="row banner">
               <div class="container">
@@ -136,45 +141,51 @@
           </div>
         </div>
 
-      <div class="row banner">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-1 col-12">
+        <div class="row banner">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-1 col-md-12 col-12">
 
-            </div>
-            <div class="col-md-2 col-12">
-              <div class="dropdown">
-                <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Select Tour
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+              <div class="col-lg-2 col-md-12 col-12">
+                <div class="dropdown">
+                  <select class="form-control" >
+                    <option selected="true" disabled="disabled">
+                      Select Tour
+                    </option>
+                    <option>Crazy Rich Asian</option>
+                    <option>Trump-Kim</option>
+                    <option>Instagrammable</option>
+                    <option>Peranakan</option>
+                    <option>Chinese</option>
+                    <option>Indian</option>
+                    <option>Middle Eastern</option>
+                    <option>Western</option>
+                  </select>
+
                 </div>
               </div>
-            </div>
-            <div class="col-md-3 col-12">
-              <div class="date-picker">
-                <div class="input">
-                  <div class="result">Select Date: <span></span></div>
-                  <button><i class="fa fa-calendar"></i></button>
+              <div class="col-lg-3 col-md-12 col-12">
+                <div class="date-picker">
+                	<div class="input">
+                		<div class="result">Select Date: <span></span></div>
+                		<button><i class="fa fa-calendar"></i></button>
+                	</div>
+                	<div class="calendar"></div>
                 </div>
-                <div class="calendar"></div>
+              </div>
+              <div class="col-lg-3 col-md-12 col-12">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="No. of pax" aria-label="No. of pax" aria-describedby="basic-addon1">
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-12 col-12">
+                <a href="#" class="btn btn-sm animated-button victoria-four">Submit</a>
               </div>
             </div>
-            <div class="col-md-3 col-12">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="No. of pax" aria-label="No. of pax" aria-describedby="basic-addon1">
-              </div>
-            </div>
-            <div class="col-md-3 col-12">
-              <a href="#" class="btn btn-sm animated-button victoria-four">Submit</a>
-            </div>
+
           </div>
-
         </div>
-      </div>
 
 
     </div>
@@ -183,45 +194,44 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3">
-            <h1>Logo</h1>
+            <img class="footer-logo" src="./images/logo.png" />
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-12">
             <ul>
               <li class="footer-header">
                 Company
               </li>
-              <li>
-                About Us
+              <li class="footer-link">
+                <a href="about.html">About Us</a>
               </li>
-              <li>
-                Blog
+              <li class="footer-link">
+                <a href="blog.html">Blog</a>
               </li>
-              <li>
-                FAQ
+              <li class="footer-link">
+                <a href="faq.html">FAQ</a>
               </li>
-              <li>
-                Contact Us
+              <li class="footer-link">
+                <a href="contact.html">Contact Us</a>
               </li>
             </ul>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-12">
             <ul>
               <li class="footer-header">
                 Food Tours
               </li>
-              <li>
-                Cuisines
+              <li class="footer-link">
+                <a href="cuisine.html">Cuisines</a>
               </li>
-              <li>
-                Themes
+              <li class="footer-link">
+                <a href="theme.html">Themes</a>
               </li>
-              <li>
-                Corporate Events
+              <li class="footer-link">
+                <a href="events.html">Corporate Events</a>
               </li>
-
             </ul>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-12">
             <ul>
               <li class="footer-header">
                 Find Us
@@ -262,6 +272,12 @@
           </div>
 
 
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <center>
+              <a href="https://www.facebook.com/wokthefork" target="_blank"><i class="footer-social-media-icon fab fa-facebook "></i></a><a href="https://www.instagram.com/wokthefork/" target="_blank"><i class="footer-social-media-icon fab fa-instagram"></i></a><i class="footer-social-media-icon fab fa-twitter"></i>
+            </center>
 
           </div>
         </div>
@@ -269,6 +285,24 @@
 
 
     </footer>
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="293996198110642"
+  theme_color="#d24d57"
+  logged_in_greeting="Hi! How can we help you?"
+  logged_out_greeting="Hi! How can we help you?">
+</div>
 
     <!-- Latest compiled and minified JavaScript -->
 

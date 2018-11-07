@@ -3,7 +3,7 @@
 /*banner*/
 #header-contact{
   height: 590px;
-  background-image: url("../images/pear/about-us-team.jpeg");
+  background-image: url("../images/pear/shiok-face.jpg");
   background-attachment: fixed;
   padding-bottom: 20px;
   background-color: rgba(0,0,0,0.6);
@@ -113,8 +113,8 @@
 .hvr-bounce-in:hover,
 .hvr-bounce-in:focus,
 .hvr-bounce-in:active {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
   -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }

@@ -1,29 +1,28 @@
 const persons = [
   {
     name: "Dhea ",
-    photo: "https://serving.photos.photobox.com/53464066dc132288128cb11531bb767f0082dcde75f3b845cd905d38c4223e95e0dc7bc9.jpg",
-    title: "CEO",
+    photo: "./images/pear/dhea.jpg",
+    title: "26",
    },
 
   {
     name: "Min Xuan",
-    photo: "https://serving.photos.photobox.com/2226093445b640ea69b3247d4e4a31ee16d7569a38f898affce33adc8fc8d0f3ecf79591.jpg",
-     title: "Project Manager",
+    photo: "./images/pear/minxuan.jpg",
+     title: "45",
   },
 
   {
     name: "Pearlyn",
-    photo: "https://serving.photos.photobox.com/80553616a29779bd113f7a340b9b1eae3636dd38534c57877597a17b7131be741c67b3ae.jpg",
-    title: "Event Consultant",
-    bio:
-      "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet architecto ea blanditiis quo labore esse magnam illum ut quibusdam. Corrupti ratione iure aliquam adipisci! Harum vitae laboriosam temporibus illo suscipit?</p><p>Saepe repudiandae rerum quam ut perferendis, ullam similique nemo quod, assumenda mollitia consectetur. Eveniet optio maxime perferendis odit possimus? Facilis architecto nesciunt doloribus consectetur culpa veritatis accusamus expedita quos voluptate!</p><p>Nisi provident minus possimus optio voluptate rem, perspiciatis, placeat, culpa aperiam quod temporibus.</p>",
+    photo: "./images/pear/pearlyn.jpg",
+    title: "24",
+   
    
   },
 
   {
-    name: "Nee Yan",
-    photo: "https://serving.photos.photobox.com/52898788b03c8a0e32a8cb52b4d43d7525f119daa2629569dbda0a8d827192217fb64c22.jpg",
-    title: "Event Coordinator",
+    name: "Nee Yen",
+    photo: "./images/pear/neeyen.jpg",
+    title: "33",
   }
 ];
 

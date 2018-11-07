@@ -65,6 +65,9 @@
                     <li>
                       <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
+                    <li>
+                      <a class="nav-link" href="cart.html" id="cart-button">Cart</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -73,7 +76,7 @@
     </header>
     <div class="container-fluid">
       <div class="row" id="header-contact">
-        <h1 class="banner-title">Cart</h1>
+        <h1 class="banner-header">Cart</h1>
 
       </div>
       <!-- <div class="row" id="big-banner">
@@ -102,18 +105,30 @@
           <hr />
           <div class="row">
             <div class="col-md-6 col-3  cart-row">
-              CRA Themes Tour Package
+              <div>
+                CRA Themes Tour Package
+                <p class="tour-detail">
+                  Date: Wednesday, 14 November 2018
+                  <br />
+                  Time: 0900 - 1400
+                  <br />
+                  Pick up point: Marina Bay Sands
+                </p>
+              </div>
+
+
+
             </div>
             <div class="col-md-2 col-2 cart-row">
-              $50.00
+              $<span id="tour-price">39.90</span>
             </div>
             <div class="col-md-1 col-3 cart-row">
               <div class="input-group mb-3">
-                <input type="number" class="form-control"  aria-describedby="basic-addon1"value="1">
+                <input type="number" min=0 class="form-control"  aria-describedby="basic-addon1"value="1" id="pax-input" onchange="updateTotal()">
               </div>
             </div>
             <div class="col-md-2 col-3 cart-row">
-              $<span id="subtotal">50.00</span>
+              $<span id="subtotal">39.90</span>
             </div>
             <div class="col-md-1 col-1 cart-row">
               <i class="fas fa-times"></i>
@@ -123,11 +138,12 @@
           <div class="row">
             <div class="col-md-3 col-12 mobile-spacing">
               <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Coupon Code" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Coupon Code" aria-describedby="basic-addon1" id="coupon-code">
               </div>
+              <span id="coupon-status"></span>
             </div>
             <div class="col-md-2 col-12 mobile-spacing">
-              <a href="#" class="btn btn-sm animated-button victoria-four">Apply Coupon</a>
+              <a href="" class="btn btn-sm animated-button victoria-four" onclick="checkCouponCode(); return false;">Apply Coupon</a>
             </div>
             <div class="col-md-5 col-12 mobile-spacing">
 
@@ -148,7 +164,7 @@
                   <span class="form-label">Total</span>
                 </div>
                 <div class="col-md-6">
-                  <span class="total-cart">$50.00</span>
+                  $<span id="total-cart">39.90</span>
                 </div>
               </div>
               <hr />
@@ -177,17 +193,17 @@
               <li class="footer-header">
                 Company
               </li>
-              <li>
-                About Us
+              <li class="footer-link">
+                <a href="about.html">About Us</a>
               </li>
-              <li>
-                Blog
+              <li class="footer-link">
+                <a href="blog.html">Blog</a>
               </li>
-              <li>
-                FAQ
+              <li class="footer-link">
+                <a href="faq.html">FAQ</a>
               </li>
-              <li>
-                Contact Us
+              <li class="footer-link">
+                <a href="contact.html">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -196,19 +212,15 @@
               <li class="footer-header">
                 Food Tours
               </li>
-              <li>
-                Cuisines
+              <li class="footer-link">
+                <a href="cuisine.html">Cuisines</a>
               </li>
-              <li>
-                Themes
+              <li class="footer-link">
+                <a href="theme.html">Themes</a>
               </li>
-              <li>
-                Corporate Events
+              <li class="footer-link">
+                <a href="events.html">Corporate Events</a>
               </li>
-              <li>
-                Refer a Friend
-              </li>
-
             </ul>
           </div>
           <div class="col-lg-3 col-md-12">
@@ -256,7 +268,7 @@
         <div class="row">
           <div class="col-md-3">
             <center>
-              <i class="footer-social-media-icon fab fa-facebook "></i><a href="https://www.instagram.com/wokthefork/" target="_blank"><i class="footer-social-media-icon fab fa-instagram"></i></a><i class="footer-social-media-icon fab fa-twitter"></i>
+              <a href="https://www.facebook.com/wokthefork" target="_blank"><i class="footer-social-media-icon fab fa-facebook "></i></a><a href="https://www.instagram.com/wokthefork/" target="_blank"><i class="footer-social-media-icon fab fa-instagram"></i></a><i class="footer-social-media-icon fab fa-twitter"></i>
             </center>
 
           </div>
@@ -265,6 +277,24 @@
 
 
     </footer>
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="293996198110642"
+  theme_color="#d24d57"
+  logged_in_greeting="Hi! How can we help you?"
+  logged_out_greeting="Hi! How can we help you?">
+</div>
 
 
 
@@ -280,6 +310,7 @@
     <script src="./js/menu.js"></script>
     <script src="./js/date.js"></script>
     <script src="./js/disclaimer.js"></script>
+    <script src="./js/cart.js"></script>
     <!-- <script src="./js/index.js"></script> -->
   </body>
 </html>

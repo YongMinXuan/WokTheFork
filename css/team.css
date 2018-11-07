@@ -60,7 +60,7 @@
   justify-content: space-between;
 }
 .person-list:hover .person {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .person:hover {
   opacity: 1 !important;
