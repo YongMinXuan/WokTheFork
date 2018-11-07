@@ -138,6 +138,7 @@
   top: 80%;
 }
 
+
 #big-banner{
   width: 100vw;
 }
@@ -146,4 +147,9 @@
 }
 #myVideo{
   width: 100%;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
 }
