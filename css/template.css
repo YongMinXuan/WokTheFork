@@ -50,6 +50,13 @@ ul{
   justify-content: flex-end;
   margin-right: 50px;
 }
+.footer-link a{
+  color: white;
+}
+.footer-link a:hover{
+  text-decoration: none;
+  font-weight: 600;
+}
 /* @media only screen and (max-width: 1250px){
   body {
     font-size: 12px;
