@@ -41,7 +41,7 @@
 
 #header-contact h1{
   margin-top: -130px;
-  
+
 }
 
 
@@ -136,6 +136,17 @@
 
 .fadeIn-bottom{
   top: 80%;
+}
+
+
+#big-banner{
+  width: 100vw;
+}
+.videoWrapper{
+  width: 100%;
+}
+#myVideo{
+  width: 100%;
 }
 
 .responsive {

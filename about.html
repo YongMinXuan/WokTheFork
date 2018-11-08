@@ -62,13 +62,15 @@
                     <li>
                       <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
+                    <li>
+                      <a class="nav-link" href="cart.html" id="cart-button">Cart</a>
+                    </li>
                 </ul>
             </nav>
 
         </div> <!-- / row -->
 
     </header>
-
     <div class="container-fluid">
 
       <!-- banner -->
@@ -82,20 +84,24 @@
       <h1 class="banner-title">Why Us</h1>
       <div class="row" id="cards">
         <div class="col-md-4">
-          <img class="mx-auto" src="images/pear/small-groups-eating.jpg">
+          <img class="mx-auto" alt="Small Groups" src="images/pear/small-groups-eating.jpg">
           <h2 class="about-why-name">Small Groups</h2>
+          <img class="mx-auto hvr-bounce-in " src="images/pear/small-groups-eating.jpg">
+          <h2 class="about-why-name">Small Groups of 12 Pax</h2>
           <p class="tour-basic-description">Every tour is no bigger than 12 pax. Our friendly guides want to get to know you too. We will cater to your every need.</p>
         </div>
 
         <div class="col-md-4">
-          <img class="mx-auto" src="images/pear/hawker-food-variety.png">
+          <img class="mx-auto" alt="Value for Money" src="images/pear/hawker-food-variety.png">
+          <img class="mx-auto hvr-bounce-in " src="images/pear/hawker-food-variety.png">
           <h2 class="about-why-name">Value for Money</h2>
-          <p class="tour-basic-description">Experience atleast 15 varieties of dishes for any tour selected.
+          <p class="tour-basic-description">Experience at least 9 variety of dishes for any tour selected.
           We guarantee quality and variety at the lowest price. </p>
         </div>
 
         <div class="col-md-4">
-          <img class="mx-auto" src="images/pear/happy-local-eating.jpg">
+          <img class="mx-auto" alt="Eat the way Locals do" src="images/pear/happy-local-eating.jpg">
+          <img class="mx-auto hvr-bounce-in " src="images/pear/happy-local-eating.jpg">
           <h2 class="about-why-name">Eat the way Locals do</h2>
           <p class="tour-basic-description">No one explains it better than the locals. Our local guides will satisfy your hunger for cultural tidbits.</p>
         </div>
@@ -106,25 +112,25 @@
       <div id="counter" class="wrapper-counter">
         <div class="row ">
           <div class="col-md-3">
-            <img src="images/pear/tours.svg">
+            <img alt="Tours Conducted" src="images/pear/tours.svg">
             <h2 class="timer count-title count-number" data-to="300" data-speed="1500"></h2>
             <p class="count-text ">Tours Conducted</p>
           </div>
 
           <div class="col-md-3">
-            <img src="images/pear/distance.svg">
+            <img alt="Km Travelled" src="images/pear/distance.svg">
             <h2 class="timer count-title count-number" data-to="50700" data-speed="1500"></h2>
             <p class="count-text ">KM Travelled</p>
           </div>
 
            <div class="col-md-3">
-            <img src="images/pear/hashtag.svg">
+            <img alt="Hashtags on Instagram" src="images/pear/hashtag.svg">
             <h2 class="timer count-title count-number" data-to="1100" data-speed="1500"></h2>
             <p class="count-text ">Hashtags on Instagram</p>
           </div>
 
           <div class="col-md-3">
-            <img src="images/pear/nationalities.svg">
+            <img alt="Nationalities Participated" src="images/pear/nationalities.svg">
             <h2 class="timer count-title count-number" data-to="57" data-speed="1500"></h2>
             <p class="count-text ">Nationalities Participated</p>
           </div>
@@ -149,7 +155,7 @@
   <div class="team-detail">
     <div class="team-detail-inner" v-if="isOk">
       <div class="team-detail-left" :style=`background-image:url(${selectedPersonData.photo})`>
-        <div class="team-detail-photo"><img :src="selectedPersonData.photo" alt="">
+        <div class="team-detail-photo"><img :src="selectedPersonData.photo" alt="Personal Data Photo">
         </div>
       </div>
       <div class="team-detail-right">
@@ -177,24 +183,24 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3">
-            <img class="footer-logo" src="./images/logo.png" />
+            <img alt="Wok The Fork Logo" class="footer-logo" src="./images/logo.png" />
           </div>
           <div class="col-lg-3 col-md-12">
             <ul>
               <li class="footer-header">
                 Company
               </li>
-              <li>
-                About Us
+              <li class="footer-link">
+                <a href="about.html">About Us</a>
               </li>
-              <li>
-                Blog
+              <li class="footer-link">
+                <a href="blog.html">Blog</a>
               </li>
-              <li>
-                FAQ
+              <li class="footer-link">
+                <a href="faq.html">FAQ</a>
               </li>
-              <li>
-                Contact Us
+              <li class="footer-link">
+                <a href="contact.html">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -203,19 +209,15 @@
               <li class="footer-header">
                 Food Tours
               </li>
-              <li>
-                Cuisines
+              <li class="footer-link">
+                <a href="cuisine.html">Cuisines</a>
               </li>
-              <li>
-                Themes
+              <li class="footer-link">
+                <a href="theme.html">Themes</a>
               </li>
-              <li>
-                Corporate Events
+              <li class="footer-link">
+                <a href="events.html">Corporate Events</a>
               </li>
-              <li>
-                Refer a Friend
-              </li>
-
             </ul>
           </div>
           <div class="col-lg-3 col-md-12">
@@ -263,7 +265,7 @@
         <div class="row">
           <div class="col-md-3">
             <center>
-              <i class="footer-social-media-icon fab fa-facebook "></i><a href="https://www.instagram.com/wokthefork/" target="_blank"><i class="footer-social-media-icon fab fa-instagram"></i></a><i class="footer-social-media-icon fab fa-twitter"></i>
+              <a href="https://www.facebook.com/wokthefork" target="_blank"><i class="footer-social-media-icon fab fa-facebook "></i></a><a href="https://www.instagram.com/wokthefork/" target="_blank"><i class="footer-social-media-icon fab fa-instagram"></i></a><i class="footer-social-media-icon fab fa-twitter"></i>
             </center>
 
           </div>
@@ -272,6 +274,24 @@
 
 
     </footer>
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="293996198110642"
+  theme_color="#d24d57"
+  logged_in_greeting="Hi! How can we help you?"
+  logged_out_greeting="Hi! How can we help you?">
+</div>
 
     <!-- scripts -->
     <!-- Latest compiled and minified JavaScript -->
