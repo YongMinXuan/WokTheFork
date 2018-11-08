@@ -266,5 +266,10 @@ a.animated-button.victoria-four:hover:after {
     padding-right: 10px;
     padding-bottom: 20px;
 }
+.cta-btn-1{
+  float: none;
+  padding: 10px;
+	/* margin: 20px 0px; */
+}
 
 }
