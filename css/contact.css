@@ -21,7 +21,7 @@ body{
 }
 #header-contact h1{
   margin-top: -180px;
-  
+
 }
 
 #big-banner p{
@@ -219,7 +219,7 @@ a.animated-button.victoria-four:hover:after {
     max-height: 200px;
     max-width: 100%;
   }
-  
+
 /* Generic Button Styles */
 
   .button{
@@ -255,16 +255,25 @@ a.animated-button.victoria-four:hover:after {
   margin-bottom: -10px;
 }
 
+
 @media only screen and (max-width: 600px){
   #info-details {
     padding-right: 20px;
     padding-left: 20px;
+}
+#contact-form{
+     padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+.cta-btn-1{
+  float: none;
+  padding: 10px;
+	/* margin: 20px 0px; */
 }
 
 #contact-form{
      padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 20px;
-}
-
 }

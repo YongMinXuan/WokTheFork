@@ -23,7 +23,7 @@ body{
 }
 #header-contact h1{
   margin-top: -180px;
-  
+
 }
 
 
@@ -193,7 +193,7 @@ a.animated-button.victoria-four:hover:after {
   padding: 20px 30px;
   font-size: 18px;
   line-height: 1.612;
-  box-shadow: 0 10px 30px -8px rgba(0,0,0,.5); 
+  box-shadow: 0 10px 30px -8px rgba(0,0,0,.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,17 +245,20 @@ a.animated-button.victoria-four:hover:after {
 
 
 
-@keyframes round{   
+@keyframes round{
   25%{
     opacity:1;
   }
   40%{
     opacity:0;
   }
-} 
+}
 
 @media only screen and (max-width: 1000px){
-
+  #reviews{
+    height: 1000px;
+  }
+}
 .rbd-review-slider .rbd-review.rbd-prev {
   transform: translate3d(-100px,0,-50px);
   display: none;
@@ -297,8 +300,8 @@ a.animated-button.victoria-four:hover:after {
 #booking-form li {
   list-style: none;
 }
-#booking-form input, 
-#booking-form textarea,  
+#booking-form input,
+#booking-form textarea,
 #booking-form select {
        font-size: 16px;
     padding: 0 28px;
@@ -326,8 +329,8 @@ a.animated-button.victoria-four:hover:after {
     line-height: 1.5;
     padding: 15px 28px;
 }
-#booking-form input:focus, 
-#booking-form textarea:focus, 
+#booking-form input:focus,
+#booking-form textarea:focus,
 #booking-form select:focus {
     outline: 0;
     border: 1px solid rgb(211,211,211);
