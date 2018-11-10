@@ -31,6 +31,16 @@ var tourPackage = [
     category: 'Cuisine',
     imgUrl: './images/peranakan-2.jpg'
   },
+  {
+    name: 'Malay',
+    category: 'Cuisine',
+    imgUrl: './images/middle-eastern.jpg'
+  },
+  {
+    name: 'Malay',
+    category: 'Cuisine',
+    imgUrl: './images/western-cuisine.jpg'
+  },
 
 ]
 tourPackage.forEach((item) => {
