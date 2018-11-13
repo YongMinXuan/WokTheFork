@@ -2,19 +2,19 @@ const persons = [
   {
     name: "Dhea ",
     photo: "./images/pear/dhea.jpg",
-    title: "26",
+    title: "Age: 26",
    },
 
   {
     name: "Min Xuan",
     photo: "./images/pear/minxuan.jpg",
-     title: "45",
+     title: "Age: 45",
   },
 
   {
     name: "Pearlyn",
     photo: "./images/pear/pearlyn.jpg",
-    title: "24",
+    title: "Age: 24",
    
    
   },
@@ -22,7 +22,7 @@ const persons = [
   {
     name: "Nee Yen",
     photo: "./images/pear/neeyen.jpg",
-    title: "33",
+    title: "Age: 33",
   }
 ];
 
