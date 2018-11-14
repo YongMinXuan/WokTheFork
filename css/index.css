@@ -246,7 +246,19 @@ hr{
 
   width: 100%;
 }
+@media only screen and (min-width: 1900px){
+  #myVideo{
+    width: 100%;
 
+    /* max-height: 500px; */
+  }
+  .videoWrapper{
+    width: 100%;
+    height: auto;
+    /* max-height: 500px; */
+    /* margin: -30px 0px; */
+  }
+}
 @media only screen and (max-width: 1000px){
   .date-picker, .dropdown-menu{
     width: 100%;
