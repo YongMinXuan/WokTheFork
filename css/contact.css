@@ -9,7 +9,7 @@ body{
 }
 #header-contact{
   height: 510px;
-  background-image:  url("https://image.ibb.co/mJ9tLa/image.png");
+  background-image:  url("../images/pear/contact-wokthefork.jpg");
   padding-bottom: 20px;
   background-color: rgba(32, 33, 33, 0.8);
   background-blend-mode: overlay;
@@ -43,13 +43,13 @@ body{
 
 }
 
-.margin{
+.margin {
     position: relative;
     width: 100%;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-bottom: 10px;
+    padding-right: 45px;
+    padding-left: 45px;
+    margin-bottom: 20px;
 }
 
 .cta-btn-3{

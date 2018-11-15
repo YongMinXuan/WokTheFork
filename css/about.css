@@ -36,8 +36,8 @@
 .wrapper-counter img{
   margin: auto;
   display: flex;
-      width: 120px;
-    height: 120px;
+      width: 100px;
+    height: 100px;
 }
 .counter {
 	background-color: #ffffff;
