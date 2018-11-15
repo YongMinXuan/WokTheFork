@@ -215,6 +215,10 @@ select {
 }
 .food-king-review h3{
   font-weight: 600;
+  margin-bottom: 30px;
+}
+.food-king-review p{
+  margin-bottom: 30px;
 }
 .flash-sales{
   text-align: center;
