@@ -297,8 +297,17 @@
     width: 100%;
     margin-bottom: 50px;
   }
-
-  .header {
-    margin-top: 50px;
-  }
 }
+
+@media only screen and (max-width: 600px){
+  .team-container {
+    padding: 0 30px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    padding-bottom: 0px;
+}
+  }

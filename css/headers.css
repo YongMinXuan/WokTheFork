@@ -66,3 +66,36 @@
     font-size: 15px;
     padding: 20px;
 }
+
+
+
+@media only screen and (max-width: 600px){
+  .banner-title {
+    text-align: center;
+    margin: 50px auto;
+    font-weight: bold;
+    font-size: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#header-contact h4 {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: -200px;
+    padding-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.tour-basic-description {
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    padding-top: 0px;
+}
+}
