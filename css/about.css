@@ -36,8 +36,8 @@
 .wrapper-counter img{
   margin: auto;
   display: flex;
-      width: 120px;
-    height: 120px;
+      width: 100px;
+    height: 100px;
 }
 .counter {
 	background-color: #ffffff;
@@ -155,4 +155,32 @@
 	margin-bottom : 40px;
 	margin-top: 0px;
 
+}
+
+@media only screen and (max-width: 600px){
+.wrapper {
+    margin: 30px auto;
+    position: relative;
+    padding: 0 0px;
+}
+
+.wrapper-counter {
+    margin: 30px auto;
+    position: relative;
+    padding: 80px 50px;
+    background-color: grey;
+    margin-right: -15px;
+    margin-left: -15px;
+    background-image: url(../images/pear/hawker-background-counter.jpg);
+    background-color: rgba(0,0,0,0.7);
+    background-blend-mode: overlay;
+}
+.count-text {
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
 }

@@ -88,7 +88,8 @@ section {
   position: relative;
 	float:left;
 	height: 100%;
-  padding-top: 10px;
+  padding-bottom: 50px;
+
 }
 
 section img {
@@ -116,7 +117,7 @@ section a {
   -o-transition: all 1s ease;
   transition: all 1s ease;
 	width: 100%;
-  height: 100%;
+  height: 89%;
   position: absolute;	
 }
 
@@ -127,7 +128,7 @@ section a:hover {
 }
 
 .content h2 {
-
+  color: #ffcc00;
   font-size: 0.875em;
   font-weight: 600;
   text-transform: uppercase;
@@ -153,6 +154,7 @@ div.content {
   width: 90%;
   margin: 0 auto;
   padding-top: 50px;
+
 }
 
 div.content h3 {
@@ -272,8 +274,8 @@ section a:hover div.content {
 
 .content h2 {
   font-size: 1em;
-      color: #ffcc00;
-          font-weight: bold;
+  color: #ffcc00;
+  font-weight: bold;
 }
 	
 }
@@ -308,4 +310,20 @@ section.programs asection a:hover div.content p {
 }
 
 
+}
+
+@media only screen and (max-width: 600px){
+div.content {
+    width: 90%;
+    margin: 35px auto;
+}
+.content p {
+    font-size: 18px;
+}
+.content h2 {
+    color: #ffcc00;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
 }

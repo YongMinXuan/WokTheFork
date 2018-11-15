@@ -9,7 +9,7 @@ body{
 }
 #header-contact{
   height: 510px;
-  background-image:  url("https://image.ibb.co/mJ9tLa/image.png");
+  background-image:  url("../images/pear/contact-wokthefork.jpg");
   padding-bottom: 20px;
   background-color: rgba(32, 33, 33, 0.8);
   background-blend-mode: overlay;
@@ -42,13 +42,14 @@ body{
 
 
 }
-.cta-btn-1{
-  float: left;
-  padding: 10px;
-}
-.cta-btn-2{
-  float: right;
-  padding: 10px;
+
+.margin {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 45px;
+    padding-left: 45px;
+    margin-bottom: 20px;
 }
 
 .cta-btn-3{
@@ -116,7 +117,6 @@ a.animated-button:link, a.animated-button:visited {
   text-transform: uppercase;
   overflow: hidden;
   letter-spacing: .08em;
-    margin-left: 20px;
   /* text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2); */
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -256,6 +256,18 @@ a.animated-button.victoria-four:hover:after {
 }
 
 
+@media only screen and (max-width: 1000px){
+#info-details {
+    padding-right: 50px;
+    padding-left: 50px;
+    /* padding: 20px; */
+}
+#contact-form {
+    padding-left: 0px; 
+    padding-right: 0px; 
+    padding-bottom: 20px;
+}
+}
 @media only screen and (max-width: 600px){
   #info-details {
     padding-right: 20px;
@@ -265,11 +277,6 @@ a.animated-button.victoria-four:hover:after {
      padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 20px;
-}
-.cta-btn-1{
-  float: none;
-  padding: 10px;
-	/* margin: 20px 0px; */
 }
 
 #contact-form{
