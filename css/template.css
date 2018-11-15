@@ -34,7 +34,7 @@ ul{
   color: #af0a0a;
 }
 #current-page a{
-  color: red;
+  font-weight: 800;
 }
 .footer{
   background-color: #383838;
