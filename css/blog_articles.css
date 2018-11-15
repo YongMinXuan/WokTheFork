@@ -124,11 +124,13 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    height: 100%;
+    height: 80%;
+
 }
 
 .name {
-    margin-left: 12%;
+      margin: auto;
+    padding: 10px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -148,8 +150,10 @@
 
 .subtitle {
     font-family: roboto;
-    margin-left:14%;
-    font-size: 20px;
+    margin: auto;
+    font-size: 18px;
+    padding: 20px 0;
+    font-weight: 500;
 }
 
 article {
@@ -323,17 +327,23 @@ article > blockquote {
 
 .font {
     font-family: roboto;
-    font-size: 21px;
+    font-size: 18px;
+    color: #292929;
+    padding: 0 35px;
 }
 
 .subtext {
     font-family: roboto;
-    font-size: 25px;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    padding: 20px 30px;
 }
 
 .title_font {
     font-family: roboto;
-    font-size: 28px;
+    font-size: 26px;
+    padding: 20px 0;
 }
 
 .blogtitle {
@@ -341,6 +351,35 @@ article > blockquote {
     padding-bottom: 30px;
     font-size: 42px;
     font-family:roboto;
+
+}
+
+.booknow {
+    font-family: roboto;
+    font-size: 22px;
+width: 100%;
+text-align: center;
+
+}
+
+.booktitle {
+    font-family: roboto;
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.booknow a{
+color: #d24d57;
+text-decoration: none;
+font-weight: 400px;
+}
+
+.booknow a:hover{
+color: #d24d57;
+text-decoration: none;
+font-weight: 800px;
 }
 
 .banner-title2{
@@ -348,9 +387,17 @@ article > blockquote {
   margin-left:auto;
   margin-right:auto;
   font-weight: bold;
-  margin-top:10%;
+  font-size: 50px;
+  margin-top:8%;
 }
 
+.banner-title3{
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  font-weight: bold;
+
+}
 
 .breakfast2{
 background-image: url('../images/singapore-local-restaurants.jpg');
