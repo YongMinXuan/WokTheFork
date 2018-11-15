@@ -9,7 +9,7 @@ body{
 }
 #header-contact{
   height: 510px;
-  background-image:  url("https://image.ibb.co/mJ9tLa/image.png");
+  background-image:  url("../images/pear/contact-wokthefork.jpg");
   padding-bottom: 20px;
   background-color: rgba(32, 33, 33, 0.8);
   background-blend-mode: overlay;
@@ -279,8 +279,12 @@ a.animated-button.victoria-four:hover:after {
     padding-bottom: 20px;
 }
 
-#contact-form{
-     padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 20px;
+.margin {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 35px;
+    padding-left: 35px;
+    margin-bottom: 20px;
+}
 }
