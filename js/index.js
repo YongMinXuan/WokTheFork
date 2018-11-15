@@ -34,12 +34,17 @@ var tourPackage = [
   {
     name: 'Malay',
     category: 'Cuisine',
-    imgUrl: './images/middleeastern.jpg'
+    imgUrl: './images/middle-eastern.jpg'
   },
   {
     name: 'Malay',
     category: 'Cuisine',
     imgUrl: './images/western-cuisine.jpg'
+  },
+  {
+    name: 'Malay',
+    category: 'Cuisine',
+    imgUrl: './images/thai.jpg'
   },
 
 ]
