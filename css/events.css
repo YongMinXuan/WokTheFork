@@ -153,7 +153,7 @@ a.animated-button.victoria-four:hover:after {
     margin-right: -15px;
     background-color: rgba(0,0,0,0.5);
   background-blend-mode: overlay;
-    background-image:  url("../images/pear/reviews-company.png");
+    background-image:  url("../images/pear/corporate-events-review.jpg");
 
 }
 
@@ -629,11 +629,11 @@ span.error {
   }
 
 #reviews h1 {
-    text-align: center;
+   text-align: center;
     font-weight: bold;
     color: white;
-    padding: 30px;
-    font-size: 35px;
+    padding: 40px;
+    font-size: 33px;
 }
 .rbd-review-slider .rbd-review {
     padding: 20px 30px;
