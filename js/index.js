@@ -41,6 +41,11 @@ var tourPackage = [
     category: 'Cuisine',
     imgUrl: './images/western-cuisine.jpg'
   },
+  {
+    name: 'Malay',
+    category: 'Cuisine',
+    imgUrl: './images/thai.jpg'
+  },
 
 ]
 tourPackage.forEach((item) => {
