@@ -47,7 +47,7 @@
 
 .blog-card .color-overlay {
   /* Rectangle 11: */
-  background: rgba(84, 104, 110, 0.4);
+  background: rgba(0, 0,0, 0.5);
   width: 350px;
   height: 500px;
   position: absolute;
@@ -73,7 +73,7 @@
   bottom: 120px;
 }
 .blog-card:hover .color-overlay {
-  background: rgba(84, 104, 110, 0.8);
+  background: rgba(0, 0,0, 0.7);
 }
 
 .title-content {
@@ -87,12 +87,12 @@
 }
 
 h3 {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #9CC9E3;
-  font-family: "Roboto", sans-serif;
-  margin-bottom: 0;
+  font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0;
 }
 
 hr {
@@ -107,7 +107,6 @@ hr {
   width: 170px;
   margin: 0 auto;
   color: #DCE3E7;
-  font-family: "Droid Serif", serif;
   font-size: 13px;
   font-style: italic;
   line-height: 18px;
