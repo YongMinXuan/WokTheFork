@@ -264,6 +264,7 @@
 }
 .point-form {
   list-style: circle;
+  margin-left: 30px;
 }
 .expect {
   font-weight: 600;
