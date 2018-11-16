@@ -43,6 +43,19 @@
 
 .blog-card.spring-fever6 {
   background: url(../images/thai.jpg) no-repeat;
+  background-position: center;
+}
+.blog-card.spring-fever7 {
+  background: url(../images/crazy-rich-asians.png) no-repeat;
+}
+.blog-card.spring-fever8 {
+  background: url(../images/trumpkim.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.blog-card.spring-fever9 {
+  background: url(../images/instagrammable-2.jpg) no-repeat;
+  background-position: center;
 }
 
 .blog-card .color-overlay {
@@ -80,7 +93,7 @@
   text-align: center;
   margin: 70px 0 0 0;
   position: absolute;
-  z-index: 20;
+  z-index: 5;
   width: 100%;
   top: 0;
   left: 0;
@@ -120,9 +133,10 @@ hr {
   margin: 0 auto;
   padding: 0 50px;
   color: #DCE3E7;
+  font-family: "Roboto", sans-serif;
   font-style: 16px;
   line-height: 24px;
-  z-index: 20;
+  z-index: 5;
   opacity: 0;
   transition: bottom 0.3s, opacity 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
@@ -131,7 +145,7 @@ hr {
   position: absolute;
   bottom: 0px;
   left: 0;
-  z-index: 20;
+  z-index: 5;
 }
 
 .utility-list {
