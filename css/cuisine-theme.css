@@ -216,12 +216,12 @@
 .sidebar {
   width: 20%;
   position: absolute;
-  right: 15%;
+  right: 10%;
   top: 120vh;
 }
 .sticky-sidebar{
   position: fixed;
-  right: 15%;
+  right: 10%;
   top: 2%;
   width: 20%;
   padding: 30px;
