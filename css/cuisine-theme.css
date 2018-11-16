@@ -43,7 +43,22 @@
   margin-top: -130px;
 
 }
+.header-contact {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 18px;
+    /* text-transform: uppercase; */
+    margin-top: -200px;
+    padding: 0 30px;
+}
 
+.pad{
+      padding: 30px 0;
+}
 
 .banner-header{
     color: white;

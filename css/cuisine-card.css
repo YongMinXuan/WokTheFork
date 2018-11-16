@@ -104,7 +104,7 @@ h3 {
     font-weight: 500;
     letter-spacing: 2px;
     color: white;
-    font-family: "Roboto", sans-serif;
+
     margin-bottom: 0;
 }
 
@@ -120,7 +120,7 @@ hr {
   width: 170px;
   margin: 0 auto;
   color: #DCE3E7;
-  font-size: 13px;
+  font-size: 16px;
   font-style: italic;
   line-height: 18px;
 }
@@ -161,11 +161,15 @@ hr {
   color: #DCE3E7;
   font-family: "Roboto", sans-serif;
 }
-.utility-list li.comments {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/icon-chat.svg) no-repeat 0 0.1em;
+.utility-list li.comments img{
+ width: 20px;
+ height: 20px;
+margin-right:10px;
 }
-.utility-list li.date {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/icon-calendar.svg) no-repeat 0 0.1em;
+.utility-list li.date img{
+  width: 20px;
+ height: 20px;
+  margin-right:10px;
 }
 
 @media only screen and (max-width: 768px){
