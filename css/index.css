@@ -211,14 +211,18 @@ select {
 }
 .food-king-review{
   padding-left: 40px;
-  padding-top: 20px;
+  /* padding-top: 50px; */
+  display: flex;
+  align-items: center;
 }
 .food-king-review h3{
   font-weight: 600;
   margin-bottom: 30px;
+  text-align: center;
 }
 .food-king-review p{
   margin-bottom: 30px;
+  text-align: center;
 }
 .flash-sales{
   text-align: center;
