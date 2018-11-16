@@ -112,7 +112,7 @@ a.animated-button:link, a.animated-button:visited {
   text-transform: uppercase;
   overflow: hidden;
   letter-spacing: .08em;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   /* text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2); */
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
