@@ -214,6 +214,7 @@ select {
   /* padding-top: 50px; */
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .food-king-review h3{
   font-weight: 600;
@@ -229,6 +230,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 10px 0px;
 }
 .flash-sales a{
   width: 80%;
@@ -268,6 +270,13 @@ hr{
   }
 }
 @media only screen and (max-width: 1000px){
+  .food-king-review{
+    padding: 30px;
+    /* padding-top: 50px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .date-picker, .dropdown-menu{
     width: 100%;
   }
