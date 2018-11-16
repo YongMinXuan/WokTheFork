@@ -309,7 +309,7 @@ figcaption{
 
 }
 
-@media only screen and (min-width: 1400px){
+@media only screen and (min-width: 1500px){
 
   .sidebar {
     width: 20%;
@@ -343,4 +343,3 @@ figcaption{
   margin-top: -200px;
   padding: 0 30px;
 }
-
