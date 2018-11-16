@@ -217,17 +217,17 @@
   width: 20%;
   position: absolute;
   right: 15%;
-  top: 100vh;
+  top: 120vh;
 }
 .sticky-sidebar{
   position: fixed;
   right: 15%;
-  top: 20%;
+  top: 2%;
   width: 20%;
   padding: 30px;
   box-shadow: 10px 10px 74px -21px rgba(0,0,0,0.64);
   background-color: white;
-  z-index: 200;
+  z-index: 5;
   border-radius: 20px;
 }
 .pax-left{
@@ -309,6 +309,28 @@ figcaption{
 
 }
 
+@media only screen and (min-width: 1400px){
+
+  .sidebar {
+    width: 20%;
+    position: absolute;
+    right: 15%;
+    top: 80%;
+  }
+  .sticky-sidebar{
+    position: fixed;
+    right: 15%;
+    top: 20%;
+    width: 20%;
+    padding: 30px;
+    box-shadow: 10px 10px 74px -21px rgba(0,0,0,0.64);
+    background-color: white;
+    z-index: 5;
+    border-radius: 20px;
+  }
+
+}
+
 .header-contact {
   color: white;
   text-align: center;
@@ -321,3 +343,4 @@ figcaption{
   margin-top: -200px;
   padding: 0 30px;
 }
+

@@ -4,3 +4,29 @@ setTimeout(hideBox,3000);setTimeout(fomoFunction,10000)}
 function hideBox(){$('#fomo').removeClass('fadeInUp');$('#fomo').addClass('fadeOutDown')}
 fomoFunction()})
 $("#up").click(function(){$("html, body").animate({scrollTop:0},"slow");return!1})
+
+
+$(window).scroll(function () { 
+
+    // distance from top of footer to top of document
+    footertotop = ($('#footercrazy').position().top);
+    // distance user has scrolled from top, adjusted to take in height of sidebar (570 pixels inc. padding)
+    scrolltop = $(document).scrollTop()+570;
+    // difference between the two
+    difference = scrolltop-footertotop;
+    
+    // if user has scrolled further than footer,
+    // pull sidebar up using a negative margin
+    
+    if (scrolltop > footertotop) {
+    
+    $('#pricesidebar').css('margin-top',  0-difference);
+    }
+    
+    else  {
+    $('#pricesidebar').css('margin-top', 0);
+    }
+    
+    
+    });
+
