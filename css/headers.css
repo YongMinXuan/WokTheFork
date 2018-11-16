@@ -86,7 +86,7 @@
     justify-content: center;
     width: 100%;
     font-size: 18px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-top: -200px;
     padding-top: 70px;
     margin-left: 20px;
